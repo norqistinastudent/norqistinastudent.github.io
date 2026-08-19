@@ -42,14 +42,14 @@ body {
     padding: 0 20px;
 }
 
+/* ✅ NAVIGATION — Kemas di kedua-dua peranti */
 .navbar {
     background: var(--gradient-khaki);
-    padding: 14px 0;
+    padding: 12px 0;
     position: sticky;
     top: 0;
     z-index: 999;
     box-shadow: 0 4px 15px rgba(158, 155, 75, 0.3);
-    backdrop-filter: blur(10px);
 }
 
 .navbar .container {
@@ -65,7 +65,6 @@ body {
     font-size: 24px;
     font-weight: 800;
     letter-spacing: 2px;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .nav-links {
@@ -73,7 +72,7 @@ body {
     list-style: none;
     gap: 4px;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 .nav-link {
@@ -84,13 +83,10 @@ body {
     padding: 6px 10px;
     border-radius: 20px;
     transition: all 0.3s ease;
-    border: 2px solid transparent;
 }
 
 .nav-link:hover {
     background: rgba(255, 255, 255, 0.25);
-    border-color: rgba(255, 255, 255, 0.3);
-    transform: translateY(-2px);
 }
 
 .section {
@@ -106,7 +102,6 @@ body {
     font-size: 26px;
     margin-bottom: 30px;
     color: var(--khaki-darker);
-    position: relative;
     font-weight: 800;
 }
 
@@ -120,6 +115,7 @@ body {
     border-radius: 4px;
 }
 
+/* ✅ PROFILE — Susun Atur Kemas di Telefon & Laptop */
 .profile-card {
     background: rgba(255, 255, 255, 0.94);
     padding: 30px 20px;
@@ -131,13 +127,6 @@ body {
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
-    transition: all 0.35s ease;
-}
-
-.profile-card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow-lift);
-    border-color: var(--khaki);
 }
 
 .profile-image img {
@@ -147,12 +136,6 @@ body {
     object-fit: cover;
     border: 5px solid var(--khaki);
     box-shadow: 0 8px 25px rgba(189, 183, 107, 0.35);
-    transition: all 0.4s ease;
-}
-
-.profile-image img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 14px 35px rgba(189, 183, 107, 0.45);
 }
 
 .profile-info {
@@ -166,15 +149,12 @@ body {
     color: var(--khaki-darker);
     margin-bottom: 8px;
     font-weight: 800;
-    letter-spacing: 1px;
-    line-height: 1.2;
 }
 
 .tagline {
     font-size: 16px;
     color: var(--text-secondary);
     margin-bottom: 10px;
-    font-style: italic;
 }
 
 .goal {
@@ -186,13 +166,7 @@ body {
     border-radius: 0 8px 8px 0;
     color: var(--khaki-darker);
     font-weight: 500;
-    transition: all 0.3s ease;
     display: inline-block;
-}
-
-.goal:hover {
-    background: var(--khaki-soft);
-    padding-left: 18px;
 }
 
 .profile-summary {
@@ -201,13 +175,7 @@ body {
     background: rgba(240, 236, 207, 0.6);
     border-radius: 10px;
     border-left: 4px solid var(--khaki);
-    transition: all 0.3s ease;
     text-align: left;
-}
-
-.profile-summary:hover {
-    background: rgba(240, 236, 207, 0.85);
-    transform: translateX(5px);
 }
 
 .profile-summary h3 {
@@ -231,17 +199,7 @@ body {
     justify-content: center;
     padding: 6px 8px;
     border-radius: 8px;
-    transition: all 0.3s ease;
     font-size: 14px;
-}
-
-.detail-item:hover {
-    background: var(--khaki-pale);
-    transform: translateX(5px);
-}
-
-.detail-item .icon {
-    font-size: 18px;
 }
 
 .family-card {
@@ -250,26 +208,14 @@ body {
     border-radius: 16px;
     border: 3px solid rgba(189, 183, 107, 0.25);
     box-shadow: var(--shadow-soft);
-    transition: all 0.35s ease;
     max-width: 800px;
     margin: 0 auto;
-}
-
-.family-card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow-lift);
-    border-color: var(--khaki);
 }
 
 .family-card p {
     margin-bottom: 14px;
     font-size: 15px;
-    color: var(--text-primary);
     line-height: 1.8;
-}
-
-.family-card p:last-child {
-    margin-bottom: 0;
 }
 
 .timeline {
@@ -293,12 +239,6 @@ body {
     background: var(--gradient-khaki);
     border-radius: 50%;
     border: 3px solid var(--khaki-pale);
-    box-shadow: 0 0 0 3px var(--khaki), 0 0 12px rgba(189, 183, 107, 0.35);
-    transition: all 0.3s ease;
-}
-
-.timeline-item:hover .timeline-dot {
-    transform: scale(1.25);
 }
 
 .timeline-item::before {
@@ -332,13 +272,6 @@ body {
     border-radius: 14px;
     border: 3px solid rgba(189, 183, 107, 0.2);
     box-shadow: var(--shadow-soft);
-    transition: all 0.35s ease;
-}
-
-.timeline-card:hover {
-    transform: translateY(-5px) translateX(5px);
-    box-shadow: var(--shadow-lift);
-    border-color: var(--khaki);
 }
 
 .job-title {
@@ -363,12 +296,6 @@ body {
     padding: 4px 0;
     border-bottom: 1px dashed var(--khaki-pale);
     font-size: 14px;
-    transition: all 0.2s ease;
-}
-
-.job-duties li:hover {
-    padding-left: 6px;
-    color: var(--khaki-darker);
 }
 
 .resume-card {
@@ -379,13 +306,6 @@ body {
     box-shadow: var(--shadow-soft);
     max-width: 650px;
     margin: 0 auto;
-    transition: all 0.35s ease;
-}
-
-.resume-card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow-lift);
-    border-color: var(--khaki);
 }
 
 .card-title {
@@ -410,13 +330,9 @@ body {
     border-radius: 10px;
     display: inline-block;
     box-shadow: 0 4px 0 var(--khaki-dark), 0 6px 12px rgba(189, 183, 107, 0.25);
-    transition: all 0.3s ease;
 }
 
-.highlight-gpa:hover {
-    transform: translateY(-3px);
-}
-
+/* ✅ SKILLS GRID — Sesuai di Telefon & Laptop */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -429,13 +345,6 @@ body {
     border-radius: 14px;
     border: 3px solid rgba(189, 183, 107, 0.2);
     box-shadow: var(--shadow-soft);
-    transition: all 0.35s ease;
-}
-
-.skill-category:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow-lift);
-    border-color: var(--khaki);
 }
 
 .skill-category h3 {
@@ -454,14 +363,7 @@ body {
 .skill-list li {
     padding: 6px 0;
     border-bottom: 1px dashed var(--khaki-pale);
-    color: var(--text-primary);
     font-size: 14px;
-    transition: all 0.25s ease;
-}
-
-.skill-list li:hover {
-    padding-left: 8px;
-    color: var(--khaki-darker);
 }
 
 .portfolio-card {
@@ -471,13 +373,6 @@ body {
     border: 3px solid rgba(189, 183, 107, 0.25);
     box-shadow: var(--shadow-soft);
     text-align: center;
-    transition: all 0.35s ease;
-}
-
-.portfolio-card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow-lift);
-    border-color: var(--khaki);
 }
 
 .portfolio-intro {
@@ -498,12 +393,6 @@ body {
     padding: 16px;
     background: rgba(240, 236, 207, 0.5);
     border-radius: 10px;
-    transition: all 0.3s ease;
-}
-
-.portfolio-item:hover {
-    background: var(--khaki-pale);
-    transform: translateY(-4px);
 }
 
 .portfolio-icon {
@@ -523,14 +412,7 @@ body {
     color: var(--text-muted);
 }
 
-.portfolio-note {
-    margin-top: 12px;
-    color: var(--text-muted);
-    font-style: italic;
-    font-size: 14px;
-}
-
-.hobbies-card {
+.hobbies-card, .cert-card {
     background: rgba(255, 255, 255, 0.94);
     padding: 25px 20px;
     border-radius: 16px;
@@ -538,40 +420,12 @@ body {
     box-shadow: var(--shadow-soft);
     max-width: 800px;
     margin: 0 auto;
-    transition: all 0.35s ease;
 }
 
-.hobbies-card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow-lift);
-    border-color: var(--khaki);
-}
-
-.hobbies-card p {
+.hobbies-card p, .cert-list-full li {
     margin-bottom: 14px;
     font-size: 15px;
     line-height: 1.8;
-}
-
-.hobbies-card p:last-child {
-    margin-bottom: 0;
-}
-
-.cert-card {
-    background: rgba(255, 255, 255, 0.94);
-    padding: 25px 20px;
-    border-radius: 16px;
-    border: 3px solid rgba(189, 183, 107, 0.25);
-    box-shadow: var(--shadow-soft);
-    max-width: 800px;
-    margin: 0 auto;
-    transition: all 0.35s ease;
-}
-
-.cert-card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow-lift);
-    border-color: var(--khaki);
 }
 
 .cert-list-full {
@@ -581,17 +435,6 @@ body {
 .cert-list-full li {
     padding: 10px 0;
     border-bottom: 1px solid var(--khaki-pale);
-    font-size: 14px;
-    transition: all 0.25s ease;
-}
-
-.cert-list-full li:last-child {
-    border-bottom: none;
-}
-
-.cert-list-full li:hover {
-    padding-left: 8px;
-    color: var(--khaki-darker);
 }
 
 .contact-info-card {
@@ -601,13 +444,6 @@ body {
     border: 3px solid rgba(189, 183, 107, 0.25);
     box-shadow: var(--shadow-soft);
     margin-bottom: 30px;
-    transition: all 0.35s ease;
-}
-
-.contact-info-card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow-lift);
-    border-color: var(--khaki);
 }
 
 .info-heading {
@@ -631,14 +467,6 @@ body {
     padding: 14px;
     background: rgba(240, 236, 207, 0.5);
     border-radius: 10px;
-    border: 2px solid transparent;
-    transition: all 0.3s ease;
-}
-
-.info-item:hover {
-    background: var(--khaki-pale);
-    transform: translateY(-4px);
-    border-color: var(--khaki-light);
 }
 
 .info-icon {
@@ -663,21 +491,15 @@ body {
     text-decoration: none;
 }
 
-.info-link:hover {
-    color: var(--khaki-dark);
-    text-decoration: underline;
-}
-
 .social-heading {
     text-align: center;
     color: var(--khaki-darker);
     font-size: 22px;
     margin-bottom: 20px;
     font-weight: 600;
-    letter-spacing: 0.5px;
 }
 
-/* ✅ SOCIAL BUTTONS — FULLY RESPONSIVE + CLEAR LOGOS */
+/* ✅ SOCIAL BUTTONS — Sesuai di Telefon & Laptop */
 .social-buttons-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -695,66 +517,34 @@ body {
     text-decoration: none;
     color: white;
     font-weight: 600;
-    border: none;
-    cursor: pointer;
-    position: relative;
-    top: 0;
     box-shadow: 0 5px 0 rgba(0,0,0,0.15), 0 8px 16px rgba(0,0,0,0.1);
     transition: all 0.15s ease;
 }
 
 .social-buttons-grid > a:hover {
-    top: -3px;
-    box-shadow: 0 8px 0 rgba(0,0,0,0.15), 0 12px 20px rgba(0,0,0,0.12);
+    transform: translateY(-3px);
 }
 
-.social-buttons-grid > a:active {
-    top: 3px;
-    box-shadow: 0 2px 0 rgba(0,0,0,0.15), 0 3px 6px rgba(0,0,0,0.08);
-}
-
-/* ✅ CLEAR SVG ICONS — BIG ENOUGH TO SEE */
 .btn-icon-svg {
     width: 36px;
     height: 36px;
     margin-bottom: 8px;
-    flex-shrink: 0;
 }
 
 .btn-label {
     font-size: 15px;
     margin-bottom: 3px;
     font-weight: 700;
-    letter-spacing: 0.5px;
 }
 
 .btn-username {
     font-size: 12px;
     opacity: 0.9;
-    font-weight: 400;
 }
 
-/* ✅ BUTTON COLORS */
-.social-btn-gh { 
-    background: var(--gradient-gh); 
-}
-.social-btn-gh:hover { 
-    background: linear-gradient(135deg, #242424, #404040); 
-}
-
-.social-btn-li { 
-    background: var(--gradient-li); 
-}
-.social-btn-li:hover { 
-    background: linear-gradient(135deg, #006699, #0088BB); 
-}
-
-.social-btn-em { 
-    background: var(--gradient-em); 
-}
-.social-btn-em:hover { 
-    background: linear-gradient(135deg, #9E9B4B, #B5AF5F); 
-}
+.social-btn-gh { background: var(--gradient-gh); }
+.social-btn-li { background: var(--gradient-li); }
+.social-btn-em { background: var(--gradient-em); }
 
 footer {
     background: var(--gradient-khaki);
@@ -771,22 +561,9 @@ footer {
     letter-spacing: 0.5px;
 }
 
-/* 🖨️ Print PDF */
-@media print {
-    .navbar, footer, .nav-link { display: none !important; }
-    section { page-break-inside: avoid; }
-    body { background: white; }
-    .section, .alt { background: white !important; }
-    .profile-card, .resume-card, .skill-category, .family-card, .portfolio-card, .hobbies-card, .cert-card, .contact-info-card, .timeline-card {
-        box-shadow: none !important;
-        border: 1px solid #ddd !important;
-        background: white !important;
-        transform: none !important;
-    }
-    .social-buttons-grid > a { box-shadow: none; }
-}
-
-/* ✅ TABLET & SMALL LAPTOP */
+/* ============================================= */
+/* ✅ TABLET & LAPTOP KECIL */
+/* ============================================= */
 @media (max-width: 820px) {
     .profile-card {
         flex-direction: column;
@@ -814,7 +591,70 @@ footer {
     .section {
         padding: 40px 16px;
     }
+    .nav-links {
+        justify-content: center;
+        width: 100%;
+        margin-top: 8px;
+    }
 }
 
-/* ✅ MOBILE PHONE */
-@media (max-width:
+/* ============================================= */
+/* ✅ TELEFON — Paparan Sempurna & Kemas */
+/* ============================================= */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 12px;
+    }
+    .logo {
+        font-size: 20px;
+    }
+    .nav-link {
+        font-size: 12px;
+        padding: 5px 8px;
+    }
+    .name {
+        font-size: 22px;
+    }
+    .tagline {
+        font-size: 14px;
+    }
+    .goal {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+    .profile-image img {
+        width: 150px;
+        height: 150px;
+    }
+    .section-title {
+        font-size: 22px;
+    }
+    .social-buttons-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .social-buttons-grid > a {
+        flex-direction: row;
+        justify-content: center;
+        gap: 12px;
+        padding: 14px;
+    }
+    .btn-icon-svg {
+        width: 24px;
+        height: 24px;
+        margin-bottom: 0;
+    }
+    .section {
+        padding: 30px 12px;
+    }
+    .profile-card, .family-card, .timeline-card, .resume-card, 
+    .skill-category, .portfolio-card, .hobbies-card, .cert-card, .contact-info-card {
+        padding: 16px 14px;
+    }
+    .timeline-item {
+        padding-left: 28px;
+    }
+    .timeline-date {
+        font-size: 12px;
+    }
+}
