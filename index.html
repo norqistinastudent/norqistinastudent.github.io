@@ -1,330 +1,256 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume — Nor Qistina Alice Lau</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💛</text></svg>">
+</head>
+<body>
 
-:root {
-    --khaki: #BDB76B;
-    --khaki-dark: #9E9B4B;
-    --khaki-light: #F0E68C;
-    --khaki-pale: #F8F4D0;
-    --text-dark: #3A3A2A;
-    --text-light: #6B6B5C;
-    --bg: #FFFEF8;
-    --white: #FFFFFF;
-    --shadow: rgba(189, 183, 107, 0.15);
-}
+    <!-- ⭐ Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">ALICE</h1>
+            <ul class="nav-links">
+                <li><a href="#profile" class="nav-link">Profile</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#certificates" class="nav-link">Certificates</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-body {
-    background: var(--bg);
-    color: var(--text-dark);
-    line-height: 1.6;
-}
+    <!-- 👤 Profile Section -->
+    <section id="profile" class="section hero">
+        <div class="container resume-container">
+            <div class="profile-card">
+                <div class="profile-image">
+                    <img src="https://i.ibb.co/r2C10xG6/me-and-michelley.jpg" alt="Alice's Photo" loading="lazy">
+                </div>
+                <div class="profile-info">
+                    <h1 class="name">NOR QISTINA ALICE LAU</h1>
+                    <p class="tagline">Administrative Clerk | Sales Support</p>
+                    <p class="goal">🎯 Career Goal: Become a Boss to a Company 💼</p>
+                    
+                    <div class="quick-details">
+                        <div class="detail-item">
+                            <span class="icon">📍</span>
+                            <span>Melaka, Malaysia 🇲🇾</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="icon">📱</span>
+                            <span>017-5145902</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="icon">✉️</span>
+                            <span>qisthammummy@gmail.com</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="icon">🕌</span>
+                            <span>Islam</span>
+                        </div>
+                    </div>
 
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+                    <div class="profile-summary">
+                        <h3>Professional Profile</h3>
+                        <p>Motivated and detail-oriented professional with experience in administrative support, sales, and customer service. Skilled in managing documentation, coordinating with clients, maintaining accurate records, and delivering excellent customer experiences. A fast learner with strong organizational and communication skills, committed to contributing effectively in a dynamic work environment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-/* === NAVIGATION === */
-.navbar {
-    background: var(--khaki);
-    padding: 15px 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 10px var(--shadow);
-}
+    <!-- 💼 Work Experience -->
+    <section id="experience" class="section alt">
+        <div class="container">
+            <h2 class="section-title">💼 Work Experience</h2>
+            <div class="timeline">
+                <!-- Job 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">July 2025 – July 2026</div>
+                    <div class="timeline-card">
+                        <h3 class="job-title">Administrative Clerk</h3>
+                        <h4 class="company">Sumesh & Partners</h4>
+                        <ul class="job-duties">
+                            <li>✅ Managed legal files and documentation</li>
+                            <li>✅ Liaised with clients and authorities</li>
+                            <li>✅ Processed police and medical document applications</li>
+                            <li>✅ Conducted insurance searches</li>
+                            <li>✅ Prepared legal documents and correspondence</li>
+                            <li>✅ Maintained and updated case records</li>
+                        </ul>
+                    </div>
+                </div>
 
-.navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+                <!-- Job 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2024 – 2025</div>
+                    <div class="timeline-card">
+                        <h3 class="job-title">Sales Assistant</h3>
+                        <h4 class="company">VNX Vape Shop</h4>
+                        <ul class="job-duties">
+                            <li>✅ Assisted customers with product recommendations</li>
+                            <li>✅ Managed inventory and stock</li>
+                            <li>✅ Promoted products through social media</li>
+                            <li>✅ Delivered excellent customer service</li>
+                        </ul>
+                    </div>
+                </div>
 
-.logo {
-    color: white;
-    font-size: 24px;
-    font-weight: 700;
-    letter-spacing: 2px;
-}
+                <!-- Job 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2023</div>
+                    <div class="timeline-card">
+                        <h3 class="job-title">Cashier</h3>
+                        <h4 class="company">5511 Mart</h4>
+                        <ul class="job-duties">
+                            <li>✅ Managed cashier transactions</li>
+                            <li>✅ Organized inventory</li>
+                            <li>✅ Delivered excellent customer service</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 25px;
-}
+    <!-- 🎓 Education -->
+    <section id="education" class="section">
+        <div class="container">
+            <h2 class="section-title">🎓 Education</h2>
+            <div class="resume-card">
+                <h3 class="card-title">GOON INTERNATIONAL COLLEGE</h3>
+                <p class="card-subtitle">Diploma in Information Technology — Semester 5</p>
+                <div class="edu-details">
+                    <div class="edu-item highlight-gpa">
+                        <strong>GPA:</strong> 4.0 / 4.0 🎓
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-.nav-link {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 6px 12px;
-    border-radius: 20px;
-    transition: 0.3s;
-}
+    <!-- 💻 Skills -->
+    <section id="skills" class="section alt">
+        <div class="container">
+            <h2 class="section-title">💻 Skills & Languages</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>📚 Technical Skills</h3>
+                    <ul class="skill-list">
+                        <li>✅ Microsoft Word</li>
+                        <li>✅ Microsoft Excel</li>
+                        <li>✅ Microsoft PowerPoint</li>
+                        <li>✅ Google Sheets</li>
+                        <li>✅ Microsoft Access (Basic)</li>
+                        <li>✅ Legal Documentation</li>
+                        <li>✅ Document Management</li>
+                        <li>✅ Insurance Search</li>
+                        <li>✅ Google Meet</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>🗣️ Languages</h3>
+                    <ul class="skill-list">
+                        <li>🇲🇾 Malay — Fluent</li>
+                        <li>🇬🇧 English — Intermediate</li>
+                        <li>🇨🇳 Chinese — Fluent</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-.nav-link:hover {
-    background: rgba(255,255,255,0.25);
-}
+    <!-- 📜 Certificates -->
+    <section id="certificates" class="section">
+        <div class="container">
+            <h2 class="section-title">📜 Certificates & Achievements</h2>
+            <div class="cert-card">
+                <ul class="cert-list-full">
+                    <li>🏆 <strong>Academic Achievement:</strong> GPA 4.0</li>
+                    <li>📜 Canva for Beginners: Basic Design Skills Workshop (2025)</li>
+                    <li>📜 Know Yourself Better Through Big 5 Personality (2024)</li>
+                    <li>📜 Program: Make Yourself A Priority</li>
+                    <li>📜 Mental Health Kickstart 2026</li>
+                    <li>📜 Hala Tuju Kerjaya: Ujian Minat Kerjaya Pelajar</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-/* === SECTIONS === */
-.section {
-    padding: 50px 20px;
-}
+    <!-- ✉️ Contact -->
+    <section id="contact" class="section alt">
+        <div class="container">
+            <h2 class="section-title">✉️ Contact & Social Media</h2>
+            <div class="contact-grid">
+                <a href="https://instagram.com/liulisze_" target="_blank" class="contact-card">
+                    <span class="contact-icon">📷</span>
+                    <span class="contact-label">Instagram</span>
+                    <span class="contact-value">@liulisze_</span>
+                </a>
+                <a href="https://www.facebook.com/share/1R9TfhGLsc/?mibextid=wwXIfr" target="_blank" class="contact-card">
+                    <span class="contact-icon">📘</span>
+                    <span class="contact-label">Facebook</span>
+                    <span class="contact-value">Xiiao Lii</span>
+                </a>
+                <a href="https://www.tiktok.com/@mightyyou_?_r=1&_t=ZS-98pH6w5Lbrs" target="_blank" class="contact-card">
+                    <span class="contact-icon">🎵</span>
+                    <span class="contact-label">TikTok</span>
+                    <span class="contact-value">@mightyyou_</span>
+                </a>
+                <a href="https://github.com/norqistinastudent" target="_blank" class="contact-card">
+                    <span class="contact-icon">💻</span>
+                    <span class="contact-label">GitHub</span>
+                    <span class="contact-value">norqistinastudent</span>
+                </a>
+                <a href="mailto:qisthammummy@gmail.com" class="contact-card email-card">
+                    <span class="contact-icon">✉️</span>
+                    <span class="contact-label">Email</span>
+                    <span class="contact-value">qisthammummy@gmail.com</span>
+                </a>
+            </div>
+        </div>
+    </section>
 
-.alt {
-    background: var(--khaki-pale);
-}
+    <!-- 🦶 Footer -->
+    <footer>
+        <p>&copy; 2026 <span class="footer-name">NOR QISTINA ALICE LAU</span> — Digital Resume 💛 | References Available Upon Request</p>
+    </footer>
 
-.section-title {
-    text-align: center;
-    font-size: 28px;
-    margin-bottom: 35px;
-    color: var(--khaki-dark);
-    position: relative;
-}
+    <!-- ⭐ Scroll Animation -->
+    <script>
+        const sections = document.querySelectorAll('section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
 
-.section-title::after {
-    content: '';
-    display: block;
-    width: 80px;
-    height: 3px;
-    background: var(--khaki);
-    margin: 10px auto 0;
-    border-radius: 3px;
-}
+        sections.forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'all 0.8s ease-out';
+            observer.observe(section);
+        });
 
-/* === PROFILE CARD === */
-.resume-container {
-    padding: 20px 0;
-}
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
 
-.profile-card {
-    background: var(--white);
-    padding: 40px;
-    border-radius: 16px;
-    box-shadow: 0 5px 20px var(--shadow);
-    display: flex;
-    gap: 40px;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.profile-image img {
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid var(--khaki);
-    box-shadow: 0 5px 15px var(--shadow);
-}
-
-.profile-info {
-    flex: 1;
-    min-width: 300px;
-}
-
-.name {
-    font-size: 32px;
-    color: var(--khaki-dark);
-    margin-bottom: 8px;
-}
-
-.tagline {
-    font-size: 18px;
-    color: var(--text-light);
-    margin-bottom: 10px;
-}
-
-.goal {
-    font-size: 16px;
-    font-style: italic;
-    margin-bottom: 20px;
-    padding-left: 10px;
-    border-left: 3px solid var(--khaki);
-}
-
-.quick-details {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
-}
-
-.detail-item {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-}
-
-.detail-item .icon {
-    font-size: 18px;
-}
-
-/* === EDUCATION CARD === */
-.resume-card {
-    background: var(--white);
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px var(--shadow);
-}
-
-.card-title {
-    font-size: 22px;
-    color: var(--khaki-dark);
-    margin-bottom: 5px;
-}
-
-.card-subtitle {
-    color: var(--text-light);
-    margin-bottom: 20px;
-}
-
-.edu-details {
-    display: grid;
-    gap: 12px;
-}
-
-.highlight-gpa {
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--khaki-dark);
-    padding: 10px;
-    background: var(--khaki-pale);
-    border-radius: 8px;
-    display: inline-block;
-}
-
-/* === SKILLS GRID === */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-}
-
-.skill-category {
-    background: var(--white);
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px var(--shadow);
-}
-
-.skill-category h3 {
-    color: var(--khaki-dark);
-    margin-bottom: 15px;
-    font-size: 17px;
-}
-
-.skill-list {
-    list-style: none;
-}
-
-.skill-list li {
-    padding: 6px 0;
-    border-bottom: 1px dashed var(--khaki-pale);
-}
-
-/* === CERTIFICATES === */
-.cert-card {
-    background: var(--white);
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px var(--shadow);
-}
-
-.cert-list-full {
-    list-style: none;
-}
-
-.cert-list-full li {
-    padding: 12px 0;
-    border-bottom: 1px solid var(--khaki-pale);
-    font-size: 15px;
-}
-
-/* === CONTACT GRID === */
-.contact-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 15px;
-}
-
-.contact-card {
-    background: var(--white);
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px var(--shadow);
-    text-align: center;
-    text-decoration: none;
-    color: inherit;
-    transition: 0.3s;
-}
-
-.contact-card:hover {
-    transform: translateY(-5px);
-    background: var(--khaki-pale);
-}
-
-.contact-icon {
-    font-size: 28px;
-    display: block;
-    margin-bottom: 8px;
-}
-
-.contact-label {
-    font-weight: 600;
-    color: var(--khaki-dark);
-    display: block;
-    margin-bottom: 4px;
-}
-
-.contact-value {
-    font-size: 13px;
-    color: var(--text-light);
-}
-
-/* === FOOTER === */
-footer {
-    background: var(--khaki-dark);
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 20px;
-}
-
-.footer-name {
-    font-weight: 600;
-}
-
-/* === PRINT FOR PDF === */
-@media print {
-    .navbar, footer, .nav-link { display: none !important; }
-    section { page-break-inside: avoid; }
-    body { background: white; }
-    .section, .alt { background: white !important; }
-    .profile-card, .resume-card, .skill-category, .cert-card, .contact-card {
-        box-shadow: none;
-        border: 1px solid #ddd;
-    }
-}
-
-/* === RESPONSIVE === */
-@media(max-width: 768px) {
-    .navbar .container {
-        flex-direction: column;
-        gap: 12px;
-    }
-    .nav-links {
-        gap: 10px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .profile-card {
-        justify-content: center;
-        text-align: center;
-    }
-    .name { font-size: 24px; }
-}
+</body>
+</html>
