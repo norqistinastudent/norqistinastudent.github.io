@@ -22,8 +22,14 @@
     --gradient-khaki: linear-gradient(135deg, #BDB76B 0%, #C9C374 100%);
 }
 
+/* 🎨 DOODLE BACKGROUND PATTERN */
 body {
-    background: linear-gradient(to bottom, #FFFEF8, #F8F6E3);
+    background-color: #FFFEF8;
+    background-image: 
+        radial-gradient(#BDB76B22 15%, transparent 16%),
+        radial-gradient(#BDB76B22 15%, transparent 16%);
+    background-size: 60px 60px;
+    background-position: 0 0, 30px 30px;
     color: var(--text-primary);
     line-height: 1.7;
     min-height: 100vh;
@@ -35,7 +41,7 @@ body {
     padding: 0 24px;
 }
 
-/* ⭐ NAVIGATION BAR — Nampak Mewah & Tetap */
+/* ⭐ NAVIGATION BAR */
 .navbar {
     background: var(--gradient-khaki);
     padding: 16px 0;
@@ -65,7 +71,7 @@ body {
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 10px;
+    gap: 8px;
     flex-wrap: wrap;
 }
 
@@ -73,11 +79,10 @@ body {
     color: white;
     text-decoration: none;
     font-weight: 500;
-    font-size: 15px;
-    padding: 8px 16px;
+    font-size: 14px;
+    padding: 7px 14px;
     border-radius: 24px;
     transition: all 0.35s ease;
-    position: relative;
 }
 
 .nav-link:hover {
@@ -85,13 +90,13 @@ body {
     transform: translateY(-2px);
 }
 
-/* 📄 BAHAGIAN HALAMAN */
+/* 📄 SECTIONS */
 .section {
     padding: 60px 24px;
 }
 
 .alt {
-    background: linear-gradient(to bottom, var(--khaki-pale), var(--khaki-soft));
+    background: linear-gradient(to bottom, rgba(240, 236, 207, 0.85), rgba(248, 246, 227, 0.85));
 }
 
 .section-title {
@@ -113,18 +118,18 @@ body {
     border-radius: 4px;
 }
 
-/* 👤 KAD PROFIL — Nampak Timbul & Lembut */
+/* 👤 PROFILE CARD */
 .profile-card {
-    background: var(--pure-white);
+    background: rgba(255, 255, 255, 0.92);
     padding: 45px;
     border-radius: 20px;
     box-shadow: var(--shadow-soft);
     display: flex;
     gap: 45px;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
     transition: box-shadow 0.4s ease, transform 0.3s ease;
-    border: 1px solid rgba(189, 183, 107, 0.15);
+    border: 2px solid rgba(189, 183, 107, 0.25);
 }
 
 .profile-card:hover {
@@ -169,7 +174,7 @@ body {
 
 .goal {
     font-size: 17px;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     padding: 12px 16px;
     background: var(--khaki-pale);
     border-left: 4px solid var(--khaki);
@@ -178,38 +183,132 @@ body {
     font-weight: 500;
 }
 
+.profile-summary {
+    margin-top: 20px;
+    padding: 18px;
+    background: rgba(240, 236, 207, 0.6);
+    border-radius: 12px;
+    border-left: 4px solid var(--khaki);
+}
+
+.profile-summary h3 {
+    color: var(--khaki-darker);
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
 .quick-details {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 12px;
+    gap: 10px;
+    margin-top: 15px;
 }
 
 .detail-item {
     display: flex;
     gap: 10px;
     align-items: center;
-    padding: 6px 0;
 }
 
 .detail-item .icon {
     font-size: 20px;
 }
 
-/* 🎓 KAD PENDIDIKAN & KANDUNGAN */
-.resume-card,
-.skill-category,
-.cert-card {
-    background: var(--pure-white);
-    padding: 32px;
-    border-radius: 16px;
+/* 💼 WORK EXPERIENCE TIMELINE */
+.timeline {
+    position: relative;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 35px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 18px;
+    height: 18px;
+    background: var(--khaki);
+    border-radius: 50%;
+    border: 4px solid var(--khaki-pale);
+    box-shadow: 0 0 0 3px var(--khaki);
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 28px;
+    width: 2px;
+    height: calc(100% + 10px);
+    background: linear-gradient(to bottom, var(--khaki), var(--khaki-pale));
+}
+
+.timeline-item:last-child::before {
+    display: none;
+}
+
+.timeline-date {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--khaki-darker);
+    margin-bottom: 8px;
+}
+
+.timeline-card {
+    background: rgba(255, 255, 255, 0.92);
+    padding: 25px;
+    border-radius: 14px;
     box-shadow: var(--shadow-soft);
-    border: 1px solid rgba(189, 183, 107, 0.12);
+    border: 2px solid rgba(189, 183, 107, 0.2);
     transition: all 0.35s ease;
 }
 
-.resume-card:hover,
-.skill-category:hover,
-.cert-card:hover {
+.timeline-card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateX(5px);
+}
+
+.job-title {
+    font-size: 20px;
+    color: var(--khaki-darker);
+    margin-bottom: 4px;
+    font-weight: 700;
+}
+
+.company {
+    font-size: 15px;
+    color: var(--text-secondary);
+    margin-bottom: 14px;
+    font-style: italic;
+}
+
+.job-duties {
+    list-style: none;
+}
+
+.job-duties li {
+    padding: 5px 0;
+    border-bottom: 1px dashed var(--khaki-pale);
+    font-size: 14.5px;
+}
+
+/* 🎓 EDUCATION CARD */
+.resume-card {
+    background: rgba(255, 255, 255, 0.92);
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-soft);
+    border: 2px solid rgba(189, 183, 107, 0.2);
+    transition: all 0.35s ease;
+}
+
+.resume-card:hover {
     box-shadow: var(--shadow-hover);
     transform: translateY(-4px);
 }
@@ -243,16 +342,30 @@ body {
     border: 2px solid var(--khaki-light);
 }
 
-/* 💻 KEMAHIRAN — SUSUNAN KEMAS */
+/* 💻 SKILLS GRID */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 24px;
+}
+
+.skill-category {
+    background: rgba(255, 255, 255, 0.92);
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: var(--shadow-soft);
+    border: 2px solid rgba(189, 183, 107, 0.2);
+    transition: all 0.35s ease;
+}
+
+.skill-category:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-4px);
 }
 
 .skill-category h3 {
     color: var(--khaki-darker);
-    margin-bottom: 18px;
+    margin-bottom: 15px;
     font-size: 18px;
     font-weight: 700;
     padding-bottom: 8px;
@@ -264,44 +377,52 @@ body {
 }
 
 .skill-list li {
-    padding: 8px 0;
+    padding: 6px 0;
     border-bottom: 1px dashed var(--khaki-pale);
     color: var(--text-primary);
+    font-size: 14.5px;
 }
 
-/* 📜 SENARAI SIJIL */
+/* 📜 CERTIFICATES */
+.cert-card {
+    background: rgba(255, 255, 255, 0.92);
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-soft);
+    border: 2px solid rgba(189, 183, 107, 0.2);
+}
+
 .cert-list-full {
     list-style: none;
 }
 
 .cert-list-full li {
-    padding: 14px 0;
+    padding: 12px 0;
     border-bottom: 1px solid var(--khaki-pale);
     font-size: 15px;
-    line-height: 1.6;
 }
 
 .cert-list-full li:last-child {
     border-bottom: none;
 }
 
-/* ✉️ KAD HUBUNGI */
+/* ✉️ CONTACT GRID */
 .contact-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 18px;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 16px;
 }
 
 .contact-card {
-    background: var(--pure-white);
-    padding: 24px 16px;
+    background: rgba(255, 255, 255, 0.92);
+    padding: 22px 16px;
     border-radius: 14px;
     box-shadow: var(--shadow-soft);
     text-align: center;
     text-decoration: none;
     color: inherit;
     transition: all 0.35s ease;
-    border: 1px solid rgba(189, 183, 107, 0.12);
+    border: 2px solid rgba(189, 183, 107, 0.2);
 }
 
 .contact-card:hover {
@@ -311,25 +432,25 @@ body {
 }
 
 .contact-icon {
-    font-size: 32px;
+    font-size: 30px;
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .contact-label {
     font-weight: 700;
     color: var(--khaki-darker);
     display: block;
-    margin-bottom: 5px;
-    font-size: 15px;
+    margin-bottom: 4px;
+    font-size: 14.5px;
 }
 
 .contact-value {
-    font-size: 13px;
+    font-size: 12.5px;
     color: var(--text-muted);
 }
 
-/* 🦶 KAKI HALAMAN */
+/* 🦶 FOOTER */
 footer {
     background: var(--gradient-khaki);
     color: white;
@@ -344,31 +465,32 @@ footer {
     letter-spacing: 1px;
 }
 
-/* 🖨️ CETAK SEBAGAI PDF */
+/* 🖨️ PRINT PDF */
 @media print {
     .navbar, footer, .nav-link { display: none !important; }
     section { page-break-inside: avoid; }
     body { background: white; }
     .section, .alt { background: white !important; }
-    .profile-card, .resume-card, .skill-category, .cert-card, .contact-card {
+    .profile-card, .resume-card, .skill-category, .cert-card, .contact-card, .timeline-card {
         box-shadow: none;
         border: 1px solid #ddd;
+        background: white !important;
     }
 }
 
-/* 📱 SESUAI TELEFON */
+/* 📱 MOBILE RESPONSIVE */
 @media(max-width: 768px) {
     .navbar .container {
         flex-direction: column;
-        gap: 14px;
+        gap: 12px;
     }
     .nav-links {
-        gap: 6px;
+        gap: 4px;
         justify-content: center;
     }
     .nav-link {
-        padding: 6px 12px;
-        font-size: 14px;
+        padding: 6px 10px;
+        font-size: 13px;
     }
     .profile-card {
         justify-content: center;
@@ -378,4 +500,5 @@ footer {
     .name { font-size: 26px; }
     .section { padding: 40px 16px; }
     .profile-image img { width: 180px; height: 180px; }
+    .timeline-item { padding-left: 30px; }
 }
