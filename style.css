@@ -2,248 +2,380 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 :root {
     --khaki: #BDB76B;
-    --khaki-light: #F0E68C;
-    --khaki-pale: #F8F4D0;
-    --text: #3A3A2A;
-    --bg: #FFFEF8;
+    --khaki-dark: #9E9B4B;
+    --khaki-darker: #7D7A3A;
+    --khaki-light: #D4D099;
+    --khaki-pale: #F0ECCF;
+    --khaki-soft: #F8F6E3;
+    --text-primary: #2F2F1F;
+    --text-secondary: #5A5A48;
+    --text-muted: #8A8A78;
+    --pure-white: #FFFFFF;
+    --shadow-soft: 0 4px 20px rgba(189, 183, 107, 0.12);
+    --shadow-medium: 0 8px 30px rgba(189, 183, 107, 0.18);
+    --shadow-hover: 0 12px 40px rgba(189, 183, 107, 0.25);
+    --gradient-khaki: linear-gradient(135deg, #BDB76B 0%, #C9C374 100%);
 }
 
 body {
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
+    background: linear-gradient(to bottom, #FFFEF8, #F8F6E3);
+    color: var(--text-primary);
+    line-height: 1.7;
+    min-height: 100vh;
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 1020px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 24px;
 }
 
+/* ⭐ NAVIGATION BAR — Nampak Mewah & Tetap */
 .navbar {
-    background: var(--khaki);
-    padding: 15px 0;
+    background: var(--gradient-khaki);
+    padding: 16px 0;
     position: sticky;
     top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    z-index: 999;
+    box-shadow: 0 3px 15px rgba(158, 155, 75, 0.25);
+    backdrop-filter: blur(10px);
 }
 
 .navbar .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
 }
 
 .logo {
     color: white;
-    font-size: 22px;
-    font-weight: bold;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 25px;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
-.nav-links a {
+.nav-link {
     color: white;
     text-decoration: none;
     font-weight: 500;
-    transition: 0.3s;
+    font-size: 15px;
+    padding: 8px 16px;
+    border-radius: 24px;
+    transition: all 0.35s ease;
+    position: relative;
 }
 
-.nav-links a:hover {
-    color: #FFFFE8;
-    border-bottom: 2px solid white;
-}
-
-.section {
-    padding: 50px 20px;
-}
-
-.alt {
-    background: var(--khaki-pale);
-}
-
-.section h2 {
-    text-align: center;
-    font-size: 28px;
-    margin-bottom: 30px;
-    color: var(--khaki);
-}
-
-.hero {
-    text-align: center;
-    padding: 70px 20px;
-}
-
-.hero h2 {
-    font-size: 36px;
-    margin-bottom: 15px;
-}
-
-.intro {
-    font-size: 18px;
-    max-width: 700px;
-    margin: 0 auto 25px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 12px 30px;
-    background: var(--khaki);
-    color: white;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-    border: none;
-    cursor: pointer;
-}
-
-.btn:hover {
-    background: #A59F5A;
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.3);
     transform: translateY(-2px);
 }
 
-.about-grid {
+/* 📄 BAHAGIAN HALAMAN */
+.section {
+    padding: 60px 24px;
+}
+
+.alt {
+    background: linear-gradient(to bottom, var(--khaki-pale), var(--khaki-soft));
+}
+
+.section-title {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 40px;
+    color: var(--khaki-darker);
+    position: relative;
+    font-weight: 700;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: var(--gradient-khaki);
+    margin: 12px auto 0;
+    border-radius: 4px;
+}
+
+/* 👤 KAD PROFIL — Nampak Timbul & Lembut */
+.profile-card {
+    background: var(--pure-white);
+    padding: 45px;
+    border-radius: 20px;
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    gap: 45px;
+    align-items: center;
+    flex-wrap: wrap;
+    transition: box-shadow 0.4s ease, transform 0.3s ease;
+    border: 1px solid rgba(189, 183, 107, 0.15);
+}
+
+.profile-card:hover {
+    box-shadow: var(--shadow-medium);
+    transform: translateY(-3px);
+}
+
+.profile-image img {
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid var(--khaki);
+    box-shadow: 0 8px 25px rgba(189, 183, 107, 0.35);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.profile-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 35px rgba(189, 183, 107, 0.45);
+}
+
+.profile-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.name {
+    font-size: 34px;
+    color: var(--khaki-darker);
+    margin-bottom: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.tagline {
+    font-size: 19px;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+    font-style: italic;
+}
+
+.goal {
+    font-size: 17px;
+    margin-bottom: 24px;
+    padding: 12px 16px;
+    background: var(--khaki-pale);
+    border-left: 4px solid var(--khaki);
+    border-radius: 0 10px 10px 0;
+    color: var(--khaki-darker);
+    font-weight: 500;
+}
+
+.quick-details {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 12px;
 }
 
-.about-item {
-    background: white;
-    padding: 12px 15px;
-    border-radius: 10px;
-    border-left: 4px solid var(--khaki);
-}
-
-.about-item strong {
-    color: var(--khaki);
-}
-
-.achievement-list {
-    list-style: none;
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.achievement-list li {
-    background: white;
-    margin: 10px 0;
-    padding: 15px 20px;
-    border-radius: 10px;
-    border-left: 4px solid var(--khaki);
-}
-
-.gallery-note {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #777;
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-}
-
-.gallery-img {
-    background: white;
-    padding: 40px 15px;
-    border-radius: 12px;
-    text-align: center;
-    border: 2px dashed var(--khaki-light);
-    min-height: 180px;
+.detail-item {
     display: flex;
+    gap: 10px;
     align-items: center;
-    justify-content: center;
+    padding: 6px 0;
 }
 
-.contact-form {
-    max-width: 500px;
-    margin: 0 auto;
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+.detail-item .icon {
+    font-size: 20px;
 }
 
-.contact-form label {
-    display: block;
-    margin: 12px 0 5px;
-    font-weight: 600;
-    color: #444;
+/* 🎓 KAD PENDIDIKAN & KANDUNGAN */
+.resume-card,
+.skill-category,
+.cert-card {
+    background: var(--pure-white);
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(189, 183, 107, 0.12);
+    transition: all 0.35s ease;
 }
 
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid var(--khaki-light);
-    border-radius: 8px;
-    font-size: 15px;
+.resume-card:hover,
+.skill-category:hover,
+.cert-card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-4px);
 }
 
-.contact-form button {
-    width: 100%;
-    margin-top: 20px;
+.card-title {
+    font-size: 23px;
+    color: var(--khaki-darker);
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+.card-subtitle {
+    color: var(--text-secondary);
+    margin-bottom: 20px;
     font-size: 16px;
 }
 
-.social-links {
-    text-align: center;
-    margin-top: 35px;
+.edu-details {
+    display: grid;
+    gap: 14px;
 }
 
-.social-links h3 {
-    margin-bottom: 15px;
-    color: #555;
-}
-
-.social-btn {
+.highlight-gpa {
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--khaki-darker);
+    padding: 12px 18px;
+    background: linear-gradient(135deg, var(--khaki-pale), var(--khaki-soft));
+    border-radius: 10px;
     display: inline-block;
-    margin: 8px;
-    padding: 10px 18px;
-    background: white;
-    color: var(--khaki);
-    border-radius: 25px;
+    border: 2px solid var(--khaki-light);
+}
+
+/* 💻 KEMAHIRAN — SUSUNAN KEMAS */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 24px;
+}
+
+.skill-category h3 {
+    color: var(--khaki-darker);
+    margin-bottom: 18px;
+    font-size: 18px;
+    font-weight: 700;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--khaki-pale);
+}
+
+.skill-list {
+    list-style: none;
+}
+
+.skill-list li {
+    padding: 8px 0;
+    border-bottom: 1px dashed var(--khaki-pale);
+    color: var(--text-primary);
+}
+
+/* 📜 SENARAI SIJIL */
+.cert-list-full {
+    list-style: none;
+}
+
+.cert-list-full li {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--khaki-pale);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.cert-list-full li:last-child {
+    border-bottom: none;
+}
+
+/* ✉️ KAD HUBUNGI */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 18px;
+}
+
+.contact-card {
+    background: var(--pure-white);
+    padding: 24px 16px;
+    border-radius: 14px;
+    box-shadow: var(--shadow-soft);
+    text-align: center;
     text-decoration: none;
-    font-weight: 500;
-    border: 2px solid var(--khaki);
-    transition: 0.3s;
+    color: inherit;
+    transition: all 0.35s ease;
+    border: 1px solid rgba(189, 183, 107, 0.12);
 }
 
-.social-btn:hover {
-    background: var(--khaki);
-    color: white;
+.contact-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    background: linear-gradient(135deg, var(--khaki-pale), var(--khaki-soft));
+    box-shadow: var(--shadow-hover);
 }
 
+.contact-icon {
+    font-size: 32px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.contact-label {
+    font-weight: 700;
+    color: var(--khaki-darker);
+    display: block;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.contact-value {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+/* 🦶 KAKI HALAMAN */
 footer {
-    background: #444;
+    background: var(--gradient-khaki);
     color: white;
     text-align: center;
-    padding: 20px;
-    margin-top: 20px;
+    padding: 24px;
+    margin-top: 30px;
+    box-shadow: 0 -3px 15px rgba(158, 155, 75, 0.2);
 }
 
+.footer-name {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* 🖨️ CETAK SEBAGAI PDF */
+@media print {
+    .navbar, footer, .nav-link { display: none !important; }
+    section { page-break-inside: avoid; }
+    body { background: white; }
+    .section, .alt { background: white !important; }
+    .profile-card, .resume-card, .skill-category, .cert-card, .contact-card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}
+
+/* 📱 SESUAI TELEFON */
 @media(max-width: 768px) {
     .navbar .container {
         flex-direction: column;
-        gap: 10px;
+        gap: 14px;
     }
     .nav-links {
-        gap: 12px;
+        gap: 6px;
+        justify-content: center;
     }
-    .hero h2 {
-        font-size: 26px;
+    .nav-link {
+        padding: 6px 12px;
+        font-size: 14px;
     }
+    .profile-card {
+        justify-content: center;
+        text-align: center;
+        padding: 30px 20px;
+    }
+    .name { font-size: 26px; }
+    .section { padding: 40px 16px; }
+    .profile-image img { width: 180px; height: 180px; }
 }
