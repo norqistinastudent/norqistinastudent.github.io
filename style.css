@@ -18,7 +18,6 @@
     --pure-white: #FFFFFF;
     --shadow-soft: 0 6px 0 rgba(158, 155, 75, 0.2), 0 10px 20px rgba(189, 183, 107, 0.15);
     --shadow-lift: 0 10px 0 rgba(158, 155, 75, 0.25), 0 16px 30px rgba(189, 183, 107, 0.25);
-    --shadow-press: 0 3px 0 rgba(158, 155, 75, 0.2), 0 5px 10px rgba(189, 183, 107, 0.15);
     --gradient-khaki: linear-gradient(135deg, #BDB76B 0%, #C9C374 100%);
     --gradient-ig: linear-gradient(135deg, #E4405F, #F58529);
     --gradient-fb: linear-gradient(135deg, #1877F2, #4285F4);
@@ -45,7 +44,7 @@ body {
     padding: 0 24px;
 }
 
-/* ⭐ NAVIGATION BAR — Sticky & Gradient */
+/* ⭐ NAVIGATION BAR */
 .navbar {
     background: var(--gradient-khaki);
     padding: 16px 0;
@@ -380,10 +379,9 @@ body {
 .highlight-gpa {
     font-size: 19px;
     font-weight: 800;
-    color: var(--khaki-darker);
+    color: white;
     padding: 14px 20px;
     background: var(--gradient-khaki);
-    color: white;
     border-radius: 12px;
     display: inline-block;
     box-shadow: 0 4px 0 var(--khaki-dark), 0 6px 15px rgba(189, 183, 107, 0.3);
@@ -619,44 +617,24 @@ body {
 }
 
 /* 📷 Instagram Button */
-.social-btn-ig {
-    background: var(--gradient-ig);
-}
-.social-btn-ig:hover {
-    background: linear-gradient(135deg, #D32F50, #E6751C);
-}
+.social-btn-ig { background: var(--gradient-ig); }
+.social-btn-ig:hover { background: linear-gradient(135deg, #D32F50, #E6751C); }
 
 /* 📘 Facebook Button */
-.social-btn-fb {
-    background: var(--gradient-fb);
-}
-.social-btn-fb:hover {
-    background: linear-gradient(135deg, #0B66E4, #2B77E6);
-}
+.social-btn-fb { background: var(--gradient-fb); }
+.social-btn-fb:hover { background: linear-gradient(135deg, #0B66E4, #2B77E6); }
 
 /* 🎵 TikTok Button */
-.social-btn-tt {
-    background: var(--gradient-tt);
-}
-.social-btn-tt:hover {
-    background: linear-gradient(135deg, #1A1A1A, #3D3D3D);
-}
+.social-btn-tt { background: var(--gradient-tt); }
+.social-btn-tt:hover { background: linear-gradient(135deg, #1A1A1A, #3D3D3D); }
 
 /* 💻 GitHub Button */
-.social-btn-gh {
-    background: var(--gradient-gh);
-}
-.social-btn-gh:hover {
-    background: linear-gradient(135deg, #242424, #404040);
-}
+.social-btn-gh { background: var(--gradient-gh); }
+.social-btn-gh:hover { background: linear-gradient(135deg, #242424, #404040); }
 
 /* ✉️ Email Button — KHAKI */
-.social-btn-em {
-    background: var(--gradient-khaki);
-}
-.social-btn-em:hover {
-    background: linear-gradient(135deg, #9E9B4B, #B5AF5F);
-}
+.social-btn-em { background: var(--gradient-khaki); }
+.social-btn-em:hover { background: linear-gradient(135deg, #9E9B4B, #B5AF5F); }
 
 /* 🦶 FOOTER */
 footer {
@@ -673,7 +651,7 @@ footer {
     letter-spacing: 1px;
 }
 
-/* 🖨️ PRINT PDF — CLEAN VERSION */
+/* 🖨️ PRINT PDF */
 @media print {
     .navbar, footer, .nav-link { display: none !important; }
     section { page-break-inside: avoid; }
@@ -690,23 +668,10 @@ footer {
 
 /* 📱 MOBILE RESPONSIVE */
 @media(max-width: 768px) {
-    .navbar .container {
-        flex-direction: column;
-        gap: 12px;
-    }
-    .nav-links {
-        gap: 4px;
-        justify-content: center;
-    }
-    .nav-link {
-        padding: 6px 10px;
-        font-size: 13px;
-    }
-    .profile-card {
-        justify-content: center;
-        text-align: center;
-        padding: 30px 20px;
-    }
+    .navbar .container { flex-direction: column; gap: 12px; }
+    .nav-links { gap: 4px; justify-content: center; }
+    .nav-link { padding: 6px 10px; font-size: 13px; }
+    .profile-card { justify-content: center; text-align: center; padding: 30px 20px; }
     .name { font-size: 26px; }
     .section { padding: 40px 16px; }
     .profile-image img { width: 180px; height: 180px; }
