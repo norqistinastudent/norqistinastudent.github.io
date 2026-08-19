@@ -1,117 +1,330 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alice's Website — Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-    <nav class="navbar">
-        <div class="container">
-            <h1 class="logo">ALICE</h1>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#achievements">Achievements</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+:root {
+    --khaki: #BDB76B;
+    --khaki-dark: #9E9B4B;
+    --khaki-light: #F0E68C;
+    --khaki-pale: #F8F4D0;
+    --text-dark: #3A3A2A;
+    --text-light: #6B6B5C;
+    --bg: #FFFEF8;
+    --white: #FFFFFF;
+    --shadow: rgba(189, 183, 107, 0.15);
+}
 
-    <section id="home" class="section hero">
-        <div class="container">
-            <h2>👋 Welcome to My Website!</h2>
-            <p class="intro">Hi! I'm Alice — a student of Information Technology who loves reading and exploring new things! 💻✨</p>
-            <a href="#about" class="btn">Get to Know Me</a>
-        </div>
-    </section>
+body {
+    background: var(--bg);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
 
-    <section id="about" class="section">
-        <div class="container">
-            <h2>📋 About Me</h2>
-            <div class="about-grid">
-                <div class="about-item"><strong>Full Name:</strong> <span>NOR QISTINA ALICE LAU</span></div>
-                <div class="about-item"><strong>Nickname:</strong> <span>ALICE</span></div>
-                <div class="about-item"><strong>Date of Birth:</strong> <span>03/10/2003</span></div>
-                <div class="about-item"><strong>Gender:</strong> <span>FEMALE</span></div>
-                <div class="about-item"><strong>Nationality:</strong> <span>MALAYSIAN</span></div>
-                <div class="about-item"><strong>Religion:</strong> <span>ISLAM</span></div>
-                <div class="about-item"><strong>Languages:</strong> <span>MALAY, ENGLISH AND CHINESE</span></div>
-                <div class="about-item"><strong>Course:</strong> <span>INFORMATION TECHNOLOGIES</span></div>
-                <div class="about-item"><strong>Semester:</strong> <span>SEMESTER 5</span></div>
-                <div class="about-item"><strong>College/University:</strong> <span>GOON INTERNATIONAL COLLEGE</span></div>
-                <div class="about-item"><strong>Career Goal:</strong> <span>BECOME A BOSS TO A COMPANY</span></div>
-                <div class="about-item"><strong>Favourite Food:</strong> <span>NASI LEMAK 🍛</span></div>
-                <div class="about-item"><strong>Favourite Colour:</strong> <span>KHAKI 🟫</span></div>
-                <div class="about-item"><strong>Hobby:</strong> <span>READING 📖</span></div>
-                <div class="about-item"><strong>Fun Fact:</strong> <span>I LOVE TO SLEEP 😴</span></div>
-            </div>
-        </div>
-    </section>
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-    <section id="achievements" class="section alt">
-        <div class="container">
-            <h2>🏆 Achievements & Activities</h2>
-            <ul class="achievement-list">
-                <li><strong>📚 Academic:</strong> GPA 4.0</li>
-                <li><strong>🏅 Competitions:</strong> —</li>
-                <li><strong>🎖️ Awards:</strong> —</li>
-                <li><strong>📜 Certificates:</strong>
-                    <ul style="margin-left:20px; margin-top:8px;">
-                        <li>• Know Yourself Better Through Big 5 Personality</li>
-                        <li>• Program: Make Yourself A Priority</li>
-                        <li>• Canva for Beginners: Basic Design Skills Workshop</li>
-                        <li>• Mental Health Kickstart 2026</li>
-                        <li>• Hala Tuju Kerjaya: Ujian Minat Kerjaya Pelajar</li>
-                    </ul>
-                </li>
-                <li><strong>🤝 Volunteer Work:</strong> —</li>
-            </ul>
-        </div>
-    </section>
+/* === NAVIGATION === */
+.navbar {
+    background: var(--khaki);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px var(--shadow);
+}
 
-    <section id="gallery" class="section">
-        <div class="container">
-            <h2>📸 My Gallery 💅🏻</h2>
-            <p class="gallery-note">📷 Photo coming soon — update your image link later!</p>
-            <div class="gallery-grid">
-                <div class="gallery-img">
-                    <a href="https://ibb.co/VY7P9gWS"><img src="https://i.ibb.co/r2C10xG6/me-and-michelley.jpg" alt="me-and-michelley" border="0"></a>
-            </div>
-        </div>
-    </section>
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    <section id="contact" class="section alt">
-        <div class="container">
-            <h2>✉️ Contact Me</h2>
-            <form class="contact-form">
-                <label>Full Name:</label>
-                <input type="text" name="name" required>
-                <label>Email:</label>
-                <input type="email" name="email" required>
-                <label>Phone Number (Optional):</label>
-                <input type="tel" name="phone">
-                <label>Message:</label>
-                <textarea name="message" rows="5" required></textarea>
-                <button type="submit" class="btn">Send ✅</button>
-            </form>
-            <div class="social-links">
-                <h3>🔗 Follow Me On</h3>
-                <a href="https://instagram.com/liulisze_" target="_blank" class="social-btn">📷 Instagram</a>
-                <a href="https://www.facebook.com/share/1R9TfhGLsc/?mibextid=wwXIfr" target="_blank" class="social-btn">📘 Facebook</a>
-                <a href="https://www.tiktok.com/@mightyyou_?_r=1&_t=ZS-98pH6w5Lbrs" target="_blank" class="social-btn">🎵 TikTok</a>
-                <a href="https://github.com/norqistinastudent" target="_blank" class="social-btn">💻 GitHub</a>
-                <a href="mailto:qisthanmummy@gmail.com" class="social-btn">✉️ Email</a>
-            </div>
-        </div>
-    </section>
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
 
-    <footer>
-        <p>&copy; 2026 NOR QISTINA ALICE LAU. Made with ❤️</p>
-    </footer>
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
 
-</body>
-</html>
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    background: rgba(255,255,255,0.25);
+}
+
+/* === SECTIONS === */
+.section {
+    padding: 50px 20px;
+}
+
+.alt {
+    background: var(--khaki-pale);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 35px;
+    color: var(--khaki-dark);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: var(--khaki);
+    margin: 10px auto 0;
+    border-radius: 3px;
+}
+
+/* === PROFILE CARD === */
+.resume-container {
+    padding: 20px 0;
+}
+
+.profile-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px var(--shadow);
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.profile-image img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--khaki);
+    box-shadow: 0 5px 15px var(--shadow);
+}
+
+.profile-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.name {
+    font-size: 32px;
+    color: var(--khaki-dark);
+    margin-bottom: 8px;
+}
+
+.tagline {
+    font-size: 18px;
+    color: var(--text-light);
+    margin-bottom: 10px;
+}
+
+.goal {
+    font-size: 16px;
+    font-style: italic;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    border-left: 3px solid var(--khaki);
+}
+
+.quick-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.detail-item {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.detail-item .icon {
+    font-size: 18px;
+}
+
+/* === EDUCATION CARD === */
+.resume-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px var(--shadow);
+}
+
+.card-title {
+    font-size: 22px;
+    color: var(--khaki-dark);
+    margin-bottom: 5px;
+}
+
+.card-subtitle {
+    color: var(--text-light);
+    margin-bottom: 20px;
+}
+
+.edu-details {
+    display: grid;
+    gap: 12px;
+}
+
+.highlight-gpa {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--khaki-dark);
+    padding: 10px;
+    background: var(--khaki-pale);
+    border-radius: 8px;
+    display: inline-block;
+}
+
+/* === SKILLS GRID === */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.skill-category {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px var(--shadow);
+}
+
+.skill-category h3 {
+    color: var(--khaki-dark);
+    margin-bottom: 15px;
+    font-size: 17px;
+}
+
+.skill-list {
+    list-style: none;
+}
+
+.skill-list li {
+    padding: 6px 0;
+    border-bottom: 1px dashed var(--khaki-pale);
+}
+
+/* === CERTIFICATES === */
+.cert-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px var(--shadow);
+}
+
+.cert-list-full {
+    list-style: none;
+}
+
+.cert-list-full li {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--khaki-pale);
+    font-size: 15px;
+}
+
+/* === CONTACT GRID === */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+.contact-card {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px var(--shadow);
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    background: var(--khaki-pale);
+}
+
+.contact-icon {
+    font-size: 28px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.contact-label {
+    font-weight: 600;
+    color: var(--khaki-dark);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.contact-value {
+    font-size: 13px;
+    color: var(--text-light);
+}
+
+/* === FOOTER === */
+footer {
+    background: var(--khaki-dark);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.footer-name {
+    font-weight: 600;
+}
+
+/* === PRINT FOR PDF === */
+@media print {
+    .navbar, footer, .nav-link { display: none !important; }
+    section { page-break-inside: avoid; }
+    body { background: white; }
+    .section, .alt { background: white !important; }
+    .profile-card, .resume-card, .skill-category, .cert-card, .contact-card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}
+
+/* === RESPONSIVE === */
+@media(max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .nav-links {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .profile-card {
+        justify-content: center;
+        text-align: center;
+    }
+    .name { font-size: 24px; }
+}
