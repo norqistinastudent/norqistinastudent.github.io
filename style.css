@@ -19,13 +19,10 @@
     --shadow-soft: 0 6px 0 rgba(158, 155, 75, 0.2), 0 10px 20px rgba(189, 183, 107, 0.15);
     --shadow-lift: 0 10px 0 rgba(158, 155, 75, 0.25), 0 16px 30px rgba(189, 183, 107, 0.25);
     --gradient-khaki: linear-gradient(135deg, #BDB76B 0%, #C9C374 100%);
-    --gradient-ig: linear-gradient(135deg, #E4405F, #F58529);
-    --gradient-fb: linear-gradient(135deg, #1877F2, #4285F4);
-    --gradient-tt: linear-gradient(135deg, #000000, #2C2C2C);
+    --gradient-li: linear-gradient(135deg, #0077B5, #00A0DC);
     --gradient-gh: linear-gradient(135deg, #333333, #525252);
 }
 
-/* 🎨 DOODLE BACKGROUND PATTERN */
 body {
     background-color: #FFFEF8;
     background-image: 
@@ -44,7 +41,6 @@ body {
     padding: 0 24px;
 }
 
-/* ⭐ NAVIGATION BAR */
 .navbar {
     background: var(--gradient-khaki);
     padding: 16px 0;
@@ -95,7 +91,6 @@ body {
     transform: translateY(-2px);
 }
 
-/* 📄 SECTIONS */
 .section {
     padding: 60px 24px;
 }
@@ -123,7 +118,6 @@ body {
     border-radius: 4px;
 }
 
-/* 👤 PROFILE CARD — POP-UP EFFECT */
 .profile-card {
     background: rgba(255, 255, 255, 0.94);
     padding: 40px;
@@ -243,7 +237,36 @@ body {
     font-size: 20px;
 }
 
-/* 💼 WORK EXPERIENCE — TIMELINE with POP-UP */
+/* 👨‍👩‍👧 Family Background Card */
+.family-card {
+    background: rgba(255, 255, 255, 0.94);
+    padding: 35px;
+    border-radius: 18px;
+    border: 3px solid rgba(189, 183, 107, 0.25);
+    box-shadow: var(--shadow-soft);
+    transition: all 0.35s ease;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.family-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lift);
+    border-color: var(--khaki);
+}
+
+.family-card p {
+    margin-bottom: 16px;
+    font-size: 16px;
+    color: var(--text-primary);
+    line-height: 1.8;
+}
+
+.family-card p:last-child {
+    margin-bottom: 0;
+}
+
+/* 💼 Timeline */
 .timeline {
     position: relative;
     max-width: 850px;
@@ -271,7 +294,6 @@ body {
 
 .timeline-item:hover .timeline-dot {
     transform: scale(1.3);
-    box-shadow: 0 0 0 3px var(--khaki), 0 0 25px rgba(189, 183, 107, 0.6);
 }
 
 .timeline-item::before {
@@ -344,13 +366,15 @@ body {
     color: var(--khaki-darker);
 }
 
-/* 🎓 EDUCATION CARD — POP-UP */
+/* 🎓 Education Card */
 .resume-card {
     background: rgba(255, 255, 255, 0.94);
     padding: 30px;
     border-radius: 18px;
     border: 3px solid rgba(189, 183, 107, 0.25);
     box-shadow: var(--shadow-soft);
+    max-width: 700px;
+    margin: 0 auto;
     transition: all 0.35s ease;
 }
 
@@ -373,11 +397,6 @@ body {
     font-size: 16px;
 }
 
-.edu-details {
-    display: grid;
-    gap: 14px;
-}
-
 .highlight-gpa {
     font-size: 18px;
     font-weight: 800;
@@ -392,10 +411,9 @@ body {
 
 .highlight-gpa:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 0 var(--khaki-dark), 0 10px 20px rgba(189, 183, 107, 0.4);
 }
 
-/* 💻 SKILLS GRID — ALL POP-UP */
+/* 💻 Skills Grid */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -424,11 +442,6 @@ body {
     font-weight: 700;
     padding-bottom: 10px;
     border-bottom: 3px solid var(--khaki-pale);
-    transition: all 0.3s ease;
-}
-
-.skill-category:hover h3 {
-    border-bottom-color: var(--khaki);
 }
 
 .skill-list {
@@ -446,16 +459,111 @@ body {
 .skill-list li:hover {
     padding-left: 10px;
     color: var(--khaki-darker);
-    font-weight: 500;
 }
 
-/* 📜 CERTIFICATES CARD — POP-UP */
+/* 🎨 Portfolio Card */
+.portfolio-card {
+    background: rgba(255, 255, 255, 0.94);
+    padding: 35px;
+    border-radius: 18px;
+    border: 3px solid rgba(189, 183, 107, 0.25);
+    box-shadow: var(--shadow-soft);
+    text-align: center;
+    transition: all 0.35s ease;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lift);
+    border-color: var(--khaki);
+}
+
+.portfolio-intro {
+    font-size: 17px;
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.portfolio-item {
+    padding: 20px;
+    background: rgba(240, 236, 207, 0.5);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.portfolio-item:hover {
+    background: var(--khaki-pale);
+    transform: translateY(-5px);
+}
+
+.portfolio-icon {
+    font-size: 32px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.portfolio-item h3 {
+    font-size: 16px;
+    color: var(--khaki-darker);
+    margin-bottom: 4px;
+}
+
+.portfolio-item p {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.portfolio-note {
+    margin-top: 15px;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+/* 💭 Hobbies Card */
+.hobbies-card {
+    background: rgba(255, 255, 255, 0.94);
+    padding: 35px;
+    border-radius: 18px;
+    border: 3px solid rgba(189, 183, 107, 0.25);
+    box-shadow: var(--shadow-soft);
+    max-width: 850px;
+    margin: 0 auto;
+    transition: all 0.35s ease;
+}
+
+.hobbies-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lift);
+    border-color: var(--khaki);
+}
+
+.hobbies-card p {
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.hobbies-card p:last-child {
+    margin-bottom: 0;
+}
+
+/* 📜 Certificates Card */
 .cert-card {
     background: rgba(255, 255, 255, 0.94);
     padding: 30px;
     border-radius: 18px;
     border: 3px solid rgba(189, 183, 107, 0.25);
     box-shadow: var(--shadow-soft);
+    max-width: 850px;
+    margin: 0 auto;
     transition: all 0.35s ease;
 }
 
@@ -485,7 +593,7 @@ body {
     color: var(--khaki-darker);
 }
 
-/* ✉️ CONTACT INFO CARD — POP-UP */
+/* ✉️ Contact Section */
 .contact-info-card {
     background: rgba(255, 255, 255, 0.94);
     padding: 30px;
@@ -553,7 +661,6 @@ body {
 .info-link {
     color: inherit;
     text-decoration: none;
-    transition: all 0.2s ease;
 }
 
 .info-link:hover {
@@ -569,7 +676,6 @@ body {
     font-weight: 600;
 }
 
-/* 🔗 SOCIAL BUTTONS — 3D PUSH EFFECT & RESPONSIVE */
 .social-buttons-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
@@ -619,27 +725,16 @@ body {
     font-weight: 400;
 }
 
-/* 📷 Instagram Button */
-.social-btn-ig { background: var(--gradient-ig); }
-.social-btn-ig:hover { background: linear-gradient(135deg, #D32F50, #E6751C); }
+.social-btn-li { background: var(--gradient-li); }
+.social-btn-li:hover { background: linear-gradient(135deg, #006699, #0088BB); }
 
-/* 📘 Facebook Button */
-.social-btn-fb { background: var(--gradient-fb); }
-.social-btn-fb:hover { background: linear-gradient(135deg, #0B66E4, #2B77E6); }
-
-/* 🎵 TikTok Button */
-.social-btn-tt { background: var(--gradient-tt); }
-.social-btn-tt:hover { background: linear-gradient(135deg, #1A1A1A, #3D3D3D); }
-
-/* 💻 GitHub Button */
 .social-btn-gh { background: var(--gradient-gh); }
 .social-btn-gh:hover { background: linear-gradient(135deg, #242424, #404040); }
 
-/* ✉️ Email Button — KHAKI */
 .social-btn-em { background: var(--gradient-khaki); }
 .social-btn-em:hover { background: linear-gradient(135deg, #9E9B4B, #B5AF5F); }
 
-/* 🦶 FOOTER */
+/* 🦶 Footer */
 footer {
     background: var(--gradient-khaki);
     color: white;
@@ -654,13 +749,13 @@ footer {
     letter-spacing: 1px;
 }
 
-/* 🖨️ PRINT PDF */
+/* 🖨️ Print PDF */
 @media print {
     .navbar, footer, .nav-link { display: none !important; }
     section { page-break-inside: avoid; }
     body { background: white; }
     .section, .alt { background: white !important; }
-    .profile-card, .resume-card, .skill-category, .cert-card, .contact-info-card, .timeline-card {
+    .profile-card, .resume-card, .skill-category, .family-card, .portfolio-card, .hobbies-card, .cert-card, .contact-info-card, .timeline-card {
         box-shadow: none !important;
         border: 1px solid #ddd !important;
         background: white !important;
@@ -669,7 +764,7 @@ footer {
     .social-buttons-grid > a { box-shadow: none; }
 }
 
-/* 📱 TABLET & SMALL LAPTOP */
+/* 📱 Tablet & Small Laptop */
 @media(max-width: 900px) {
     .profile-card {
         flex-direction: column;
@@ -680,7 +775,7 @@ footer {
     }
 }
 
-/* 📱 MOBILE PHONE */
+/* 📱 Mobile Phone */
 @media(max-width: 768px) {
     .navbar .container {
         flex-direction: column;
@@ -702,15 +797,18 @@ footer {
     .profile-image img { width: 170px; height: 170px; }
     .timeline-item { padding-left: 32px; }
     .timeline-card { padding: 18px; }
-    .social-buttons-grid { grid-template-columns: repeat(2, 1fr); }
+    .social-buttons-grid { grid-template-columns: repeat(3, 1fr); }
     .info-row { grid-template-columns: 1fr; }
     .skills-grid { grid-template-columns: 1fr; }
     .logo { font-size: 22px; }
+    .portfolio-grid { grid-template-columns: 1fr 1fr; }
+    .family-card, .hobbies-card, .portfolio-card { padding: 25px 20px; }
 }
 
-/* 📱 VERY SMALL PHONE */
+/* 📱 Very Small Phone */
 @media(max-width: 400px) {
     .social-buttons-grid { grid-template-columns: 1fr; }
     .nav-links { gap: 2px; }
     .nav-link { padding: 5px 8px; font-size: 12px; }
+    .portfolio-grid { grid-template-columns: 1fr; }
 }
