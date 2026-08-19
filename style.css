@@ -12,14 +12,17 @@
     --khaki-light: #D4D099;
     --khaki-pale: #F0ECCF;
     --khaki-soft: #F8F6E3;
+    --linkedin-blue: #0077B5;
+    --linkedin-blue-dark: #005580;
     --text-primary: #2F2F1F;
     --text-secondary: #5A5A48;
     --text-muted: #8A8A78;
     --pure-white: #FFFFFF;
     --shadow-soft: 0 6px 0 rgba(158, 155, 75, 0.2), 0 10px 20px rgba(189, 183, 107, 0.15);
-    --shadow-lift: 0 10px 0 rgba(158, 155, 75, 0.25), 0 16px 30px rgba(189, 183, 107, 0.25);
+    --shadow-lift: 0 10px 0 rgba(0, 119, 181, 0.25), 0 16px 30px rgba(0, 119, 181, 0.2);
+    --shadow-li: 0 6px 0 rgba(0, 85, 128, 0.4), 0 10px 20px rgba(0, 119, 181, 0.3);
     --gradient-khaki: linear-gradient(135deg, #BDB76B 0%, #C9C374 100%);
-    --gradient-li: linear-gradient(135deg, #0077B5, #00A0DC);
+    --gradient-li: linear-gradient(135deg, #0077B5, #0096D6);
     --gradient-gh: linear-gradient(135deg, #333333, #525252);
 }
 
@@ -695,23 +698,54 @@ body {
     cursor: pointer;
     position: relative;
     top: 0;
-    box-shadow: 0 6px 0 rgba(0,0,0,0.2), 0 10px 15px rgba(0,0,0,0.1);
     transition: all 0.15s ease;
 }
 
-.social-buttons-grid > a:hover {
+/* ✅ BUTANG LINKEDIN — LOGO RASMI & WARNA BIRU ASLI */
+.social-btn-li {
+    background: linear-gradient(135deg, #0077B5, #0096D6);
+    box-shadow: 0 6px 0 #005580, 0 10px 20px rgba(0, 119, 181, 0.35);
+}
+
+.social-btn-li:hover {
+    background: linear-gradient(135deg, #006699, #0088BB);
     top: -4px;
-    box-shadow: 0 10px 0 rgba(0,0,0,0.2), 0 14px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 0 #005580, 0 14px 25px rgba(0, 119, 181, 0.45);
 }
 
-.social-buttons-grid > a:active {
+.social-btn-li:active {
     top: 4px;
-    box-shadow: 0 2px 0 rgba(0,0,0,0.2), 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 0 #005580, 0 4px 8px rgba(0, 119, 181, 0.3);
 }
 
-.btn-icon {
-    font-size: 28px;
+.social-btn-gh {
+    background: var(--gradient-gh);
+    box-shadow: 0 6px 0 #1a1a1a, 0 10px 15px rgba(0,0,0,0.2);
+}
+
+.social-btn-gh:hover {
+    background: linear-gradient(135deg, #242424, #404040);
+    top: -4px;
+    box-shadow: 0 10px 0 #1a1a1a, 0 14px 20px rgba(0,0,0,0.25);
+}
+
+.social-btn-em {
+    background: var(--gradient-khaki);
+    box-shadow: 0 6px 0 var(--khaki-dark), 0 10px 15px rgba(158, 155, 75, 0.25);
+}
+
+.social-btn-em:hover {
+    background: linear-gradient(135deg, #9E9B4B, #B5AF5F);
+    top: -4px;
+    box-shadow: 0 10px 0 var(--khaki-dark), 0 14px 20px rgba(158, 155, 75, 0.35);
+}
+
+/* Ikon SVG */
+.btn-svg-icon {
+    width: 30px;
+    height: 30px;
     margin-bottom: 6px;
+    filter: drop-shadow(0 2px 3px rgba(0,0,0,0.15));
 }
 
 .btn-name {
@@ -721,18 +755,9 @@ body {
 
 .btn-handle {
     font-size: 11.5px;
-    opacity: 0.85;
+    opacity: 0.9;
     font-weight: 400;
 }
-
-.social-btn-li { background: var(--gradient-li); }
-.social-btn-li:hover { background: linear-gradient(135deg, #006699, #0088BB); }
-
-.social-btn-gh { background: var(--gradient-gh); }
-.social-btn-gh:hover { background: linear-gradient(135deg, #242424, #404040); }
-
-.social-btn-em { background: var(--gradient-khaki); }
-.social-btn-em:hover { background: linear-gradient(135deg, #9E9B4B, #B5AF5F); }
 
 /* 🦶 Footer */
 footer {
@@ -761,54 +786,3 @@ footer {
         background: white !important;
         transform: none !important;
     }
-    .social-buttons-grid > a { box-shadow: none; }
-}
-
-/* 📱 Tablet & Small Laptop */
-@media(max-width: 900px) {
-    .profile-card {
-        flex-direction: column;
-        text-align: center;
-    }
-    .quick-details {
-        justify-content: center;
-    }
-}
-
-/* 📱 Mobile Phone */
-@media(max-width: 768px) {
-    .navbar .container {
-        flex-direction: column;
-        gap: 10px;
-    }
-    .nav-links {
-        gap: 4px;
-        justify-content: center;
-    }
-    .nav-link {
-        padding: 6px 10px;
-        font-size: 13px;
-    }
-    .profile-card {
-        padding: 25px 20px;
-    }
-    .name { font-size: 24px; }
-    .section { padding: 40px 16px; }
-    .profile-image img { width: 170px; height: 170px; }
-    .timeline-item { padding-left: 32px; }
-    .timeline-card { padding: 18px; }
-    .social-buttons-grid { grid-template-columns: repeat(3, 1fr); }
-    .info-row { grid-template-columns: 1fr; }
-    .skills-grid { grid-template-columns: 1fr; }
-    .logo { font-size: 22px; }
-    .portfolio-grid { grid-template-columns: 1fr 1fr; }
-    .family-card, .hobbies-card, .portfolio-card { padding: 25px 20px; }
-}
-
-/* 📱 Very Small Phone */
-@media(max-width: 400px) {
-    .social-buttons-grid { grid-template-columns: 1fr; }
-    .nav-links { gap: 2px; }
-    .nav-link { padding: 5px 8px; font-size: 12px; }
-    .portfolio-grid { grid-template-columns: 1fr; }
-}
