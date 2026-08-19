@@ -12,18 +12,16 @@
     --khaki-light: #D4D099;
     --khaki-pale: #F0ECCF;
     --khaki-soft: #F8F6E3;
-    --linkedin-blue: #0077B5;
-    --linkedin-blue-dark: #005580;
     --text-primary: #2F2F1F;
     --text-secondary: #5A5A48;
     --text-muted: #8A8A78;
     --pure-white: #FFFFFF;
     --shadow-soft: 0 6px 0 rgba(158, 155, 75, 0.2), 0 10px 20px rgba(189, 183, 107, 0.15);
-    --shadow-lift: 0 10px 0 rgba(0, 119, 181, 0.25), 0 16px 30px rgba(0, 119, 181, 0.2);
-    --shadow-li: 0 6px 0 rgba(0, 85, 128, 0.4), 0 10px 20px rgba(0, 119, 181, 0.3);
+    --shadow-lift: 0 10px 0 rgba(158, 155, 75, 0.25), 0 16px 30px rgba(189, 183, 107, 0.25);
     --gradient-khaki: linear-gradient(135deg, #BDB76B 0%, #C9C374 100%);
-    --gradient-li: linear-gradient(135deg, #0077B5, #0096D6);
-    --gradient-gh: linear-gradient(135deg, #333333, #525252);
+    --gradient-li: linear-gradient(135deg, #0077B5, #0096D1);
+    --gradient-gh: linear-gradient(135deg, #333333, #4A4A4A);
+    --gradient-em: linear-gradient(135deg, #BDB76B, #C9C374);
 }
 
 body {
@@ -240,7 +238,6 @@ body {
     font-size: 20px;
 }
 
-/* 👨‍👩‍👧 Family Background Card */
 .family-card {
     background: rgba(255, 255, 255, 0.94);
     padding: 35px;
@@ -269,7 +266,6 @@ body {
     margin-bottom: 0;
 }
 
-/* 💼 Timeline */
 .timeline {
     position: relative;
     max-width: 850px;
@@ -369,7 +365,6 @@ body {
     color: var(--khaki-darker);
 }
 
-/* 🎓 Education Card */
 .resume-card {
     background: rgba(255, 255, 255, 0.94);
     padding: 30px;
@@ -416,7 +411,6 @@ body {
     transform: translateY(-3px);
 }
 
-/* 💻 Skills Grid */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -464,7 +458,6 @@ body {
     color: var(--khaki-darker);
 }
 
-/* 🎨 Portfolio Card */
 .portfolio-card {
     background: rgba(255, 255, 255, 0.94);
     padding: 35px;
@@ -530,7 +523,6 @@ body {
     font-style: italic;
 }
 
-/* 💭 Hobbies Card */
 .hobbies-card {
     background: rgba(255, 255, 255, 0.94);
     padding: 35px;
@@ -558,7 +550,6 @@ body {
     margin-bottom: 0;
 }
 
-/* 📜 Certificates Card */
 .cert-card {
     background: rgba(255, 255, 255, 0.94);
     padding: 30px;
@@ -596,7 +587,6 @@ body {
     color: var(--khaki-darker);
 }
 
-/* ✉️ Contact Section */
 .contact-info-card {
     background: rgba(255, 255, 255, 0.94);
     padding: 30px;
@@ -674,22 +664,25 @@ body {
 .social-heading {
     text-align: center;
     color: var(--khaki-darker);
-    font-size: 20px;
+    font-size: 24px;
     margin-bottom: 25px;
     font-weight: 600;
+    letter-spacing: 1px;
 }
 
 .social-buttons-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .social-buttons-grid > a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px 12px;
+    padding: 28px 15px;
     border-radius: 16px;
     text-decoration: none;
     color: white;
@@ -698,68 +691,61 @@ body {
     cursor: pointer;
     position: relative;
     top: 0;
+    box-shadow: 0 6px 0 rgba(0,0,0,0.15), 0 10px 20px rgba(0,0,0,0.1);
     transition: all 0.15s ease;
 }
 
-/* ✅ BUTANG LINKEDIN — LOGO RASMI & WARNA BIRU ASLI */
-.social-btn-li {
-    background: linear-gradient(135deg, #0077B5, #0096D6);
-    box-shadow: 0 6px 0 #005580, 0 10px 20px rgba(0, 119, 181, 0.35);
-}
-
-.social-btn-li:hover {
-    background: linear-gradient(135deg, #006699, #0088BB);
+.social-buttons-grid > a:hover {
     top: -4px;
-    box-shadow: 0 10px 0 #005580, 0 14px 25px rgba(0, 119, 181, 0.45);
+    box-shadow: 0 10px 0 rgba(0,0,0,0.15), 0 14px 25px rgba(0,0,0,0.12);
 }
 
-.social-btn-li:active {
+.social-buttons-grid > a:active {
     top: 4px;
-    box-shadow: 0 2px 0 #005580, 0 4px 8px rgba(0, 119, 181, 0.3);
+    box-shadow: 0 2px 0 rgba(0,0,0,0.15), 0 4px 8px rgba(0,0,0,0.08);
 }
 
-.social-btn-gh {
-    background: var(--gradient-gh);
-    box-shadow: 0 6px 0 #1a1a1a, 0 10px 15px rgba(0,0,0,0.2);
+.btn-icon-svg {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+    flex-shrink: 0;
 }
 
-.social-btn-gh:hover {
-    background: linear-gradient(135deg, #242424, #404040);
-    top: -4px;
-    box-shadow: 0 10px 0 #1a1a1a, 0 14px 20px rgba(0,0,0,0.25);
+.btn-label {
+    font-size: 16px;
+    margin-bottom: 4px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
 }
 
-.social-btn-em {
-    background: var(--gradient-khaki);
-    box-shadow: 0 6px 0 var(--khaki-dark), 0 10px 15px rgba(158, 155, 75, 0.25);
-}
-
-.social-btn-em:hover {
-    background: linear-gradient(135deg, #9E9B4B, #B5AF5F);
-    top: -4px;
-    box-shadow: 0 10px 0 var(--khaki-dark), 0 14px 20px rgba(158, 155, 75, 0.35);
-}
-
-/* Ikon SVG */
-.btn-svg-icon {
-    width: 30px;
-    height: 30px;
-    margin-bottom: 6px;
-    filter: drop-shadow(0 2px 3px rgba(0,0,0,0.15));
-}
-
-.btn-name {
-    font-size: 14.5px;
-    margin-bottom: 3px;
-}
-
-.btn-handle {
-    font-size: 11.5px;
+.btn-username {
+    font-size: 13px;
     opacity: 0.9;
     font-weight: 400;
 }
 
-/* 🦶 Footer */
+.social-btn-gh { 
+    background: var(--gradient-gh); 
+}
+.social-btn-gh:hover { 
+    background: linear-gradient(135deg, #242424, #404040); 
+}
+
+.social-btn-li { 
+    background: var(--gradient-li); 
+}
+.social-btn-li:hover { 
+    background: linear-gradient(135deg, #006699, #0088BB); 
+}
+
+.social-btn-em { 
+    background: var(--gradient-em); 
+}
+.social-btn-em:hover { 
+    background: linear-gradient(135deg, #9E9B4B, #B5AF5F); 
+}
+
 footer {
     background: var(--gradient-khaki);
     color: white;
@@ -774,7 +760,6 @@ footer {
     letter-spacing: 1px;
 }
 
-/* 🖨️ Print PDF */
 @media print {
     .navbar, footer, .nav-link { display: none !important; }
     section { page-break-inside: avoid; }
@@ -786,3 +771,74 @@ footer {
         background: white !important;
         transform: none !important;
     }
+    .social-buttons-grid > a { box-shadow: none; }
+}
+
+@media (max-width: 850px) {
+    .profile-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    .quick-details {
+        justify-content: center;
+    }
+    .social-buttons-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+    }
+    .social-buttons-grid > a {
+        padding: 20px 10px;
+    }
+    .btn-icon-svg {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .nav-links {
+        gap: 4px;
+        justify-content: center;
+    }
+    .nav-link {
+        padding: 6px 10px;
+        font-size: 13px;
+    }
+    .profile-card {
+        padding: 25px 20px;
+    }
+    .name { font-size: 24px; }
+    .section { padding: 40px 16px; }
+    .profile-image img { width: 170px; height: 170px; }
+    .timeline-item { padding-left: 32px; }
+    .timeline-card { padding: 18px; }
+    .social-buttons-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .social-buttons-grid > a {
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+        padding: 18px 15px;
+    }
+    .btn-icon-svg {
+        width: 28px;
+        height: 28px;
+        margin-bottom: 0;
+    }
+    .btn-label {
+        font-size: 15px;
+        margin-bottom: 2px;
+    }
+    .btn-username {
+        font-size: 12px;
+    }
+    .info-row {
+        grid-template-columns: 1fr;
+    }
+}
