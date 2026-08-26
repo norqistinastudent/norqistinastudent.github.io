@@ -3,73 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume — Nor Qistina Alice Lau</title>
+    <title>NOR QISTINA ALICE LAU - Digital Resume 2026</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- CAT HAND BACKGROUND -->
-<div class="cat-hand left">🐱</div>
-<div class="cat-hand right">🐱</div>
+<!-- BACKGROUND DOTS -->
+<div class="bg-dots"></div>
 
 <!-- ========================================= -->
-<!-- PAGE 0: MENU UTAMA - 9 BUTTON MACAM GAMBAR -->
+<!-- PAGE 0: MENU UTAMA -->
 <!-- ========================================= -->
 <div id="menu-page" class="page active">
-    <div class="container menu-container">
-        <h1 class="main-logo">NOR QISTINA ALICE LAU</h1>
+    <div class="container">
+        <h1 class="main-title">NOR QISTINA ALICE<br>LAU</h1>
         <p class="main-subtitle">Digital Resume 2026</p>
         
         <div class="menu-buttons">
-            <button class="menu-btn" onclick="showPage('profile')"><span>PROFILE</span><span class="icon">🐾</span></button>
-            <button class="menu-btn" onclick="showPage('family')"><span>FAMILY</span><span class="icon">🐾</span></button>
-            <button class="menu-btn" onclick="showPage('experience')"><span>EXPERIENCE</span><span class="icon">🐾</span></button>
-            <button class="menu-btn" onclick="showPage('education')"><span>EDUCATION</span><span class="icon">🐾</span></button>
-            <button class="menu-btn" onclick="showPage('skills')"><span>SKILLS</span><span class="icon">🐾</span></button>
-            <button class="menu-btn" onclick="showPage('portfolio')"><span>PORTFOLIO</span><span class="icon">🐾</span></button>
-            <button class="menu-btn" onclick="showPage('hobbies')"><span>HOBBIES</span><span class="icon">🐾</span></button>
-            <button class="menu-btn" onclick="showPage('certificates')"><span>CERTIFICATES</span><span class="icon">🐾</span></button>
-            <button class="menu-btn" onclick="showPage('contact')"><span>CONTACT</span><span class="icon">🐾</span></button>
+            <button onclick="showPage('profile')">PROFILE🐾</button>
+            <button onclick="showPage('family')">FAMILY🐾</button>
+            <button onclick="showPage('experience')">EXPERIENCE🐾</button>
+            <button onclick="showPage('education')">EDUCATION🐾</button>
+            <button onclick="showPage('skills')">SKILLS🐾</button>
+            <button onclick="showPage('portfolio')">PORTFOLIO🐾</button>
+            <button onclick="showPage('hobbies')">HOBBIES🐾</button>
+            <button onclick="showPage('certificates')">CERTIFICATES🐾</button>
+            <button onclick="showPage('contact')">CONTACT🐾</button>
         </div>
     </div>
 </div>
 
 <!-- ========================================= -->
-<!-- PAGE 1: PROFILE - FULL INFO KAU -->
+<!-- PAGE 1: PROFILE -->
 <!-- ========================================= -->
 <div id="profile" class="page">
     <button class="home-btn" onclick="showPage('menu-page')">🏠 HOME</button>
-    <div class="container resume-container">
-        <div class="profile-card">
+    <div class="container">
+        <div class="profile-wrapper">
             <div class="profile-image">
                 <img src="https://i.ibb.co/DPQjTPM6/Passport-pic.jpg" alt="Alice's Photo">
             </div>
-            <div class="profile-info">
-                <h1 class="name">NOR QISTINA ALICE LAU</h1>
-                <p class="tagline">Administrative Clerk | Sales Support | Designer</p>
-                <p class="goal">🎯 Career Goal: Become a Boss to a Company 💼</p>
-                <div class="quick-details">
-                    <div class="detail-item"><span class="icon">📍</span><span>Melaka, Malaysia 🇲🇾</span></div>
-                    <div class="detail-item"><span class="icon">📱</span><span>017-5145902</span></div>
-                    <div class="detail-item"><span class="icon">✉️</span><span>alicelau03@yahoo.com</span></div>
-                </div>
-                <div class="profile-summary">
-                    <h3>✨ Professional Profile</h3>
-                    <p>Motivated and detail-oriented professional with experience in administrative support, sales, and customer service. Skilled in managing documentation, coordinating with clients, maintaining accurate records, and delivering excellent customer experiences. A fast learner with strong organizational and communication skills, committed to contributing effectively in a dynamic work environment.</p>
-                </div>
+            <h2 class="profile-name">NOR QISTINA ALICE LAU</h2>
+            <p class="profile-tagline">Administrative Clerk | Sales Support | Designer</p>
+            <div class="profile-goal">🎯 Career Goal: Become a Boss to a Company 💼</div>
+            <div class="profile-location">📍 Melaka, Malaysia 🇲🇾</div>
+            <div class="profile-contact">
+                <p>📱 017-5145902</p>
+                <p>✉️ alicelau03@yahoo.com</p>
+            </div>
+            <div class="profile-summary">
+                <h3>✨ Professional Profile</h3>
+                <p>Motivated and detail-oriented professional with experience in administrative support, sales, and customer service. Skilled in managing documentation, coordinating with clients, maintaining accurate records, and delivering excellent customer experiences. A fast learner with strong organizational and communication skills, committed to contributing effectively in a dynamic work environment.</p>
             </div>
         </div>
     </div>
 </div>
 
 <!-- ========================================= -->
-<!-- PAGE 2: FAMILY - FULL INFO KAU -->
+<!-- PAGE 2: FAMILY -->
 <!-- ========================================= -->
 <div id="family" class="page">
     <button class="home-btn" onclick="showPage('menu-page')">🏠 HOME</button>
     <div class="container">
-        <h2 class="section-title">👨‍👩‍👧 Family Background</h2>
-        <div class="family-card">
+        <div class="content-card">
+            <h2 class="section-title">👨‍👩‍👧 Family Background</h2>
             <p>I am the eldest child among six siblings. I am married and blessed with a wonderful child who is 6 years old this year.</p>
             <p>My mother works as a cleaner at a shopping mall and has always been my greatest source of strength and inspiration. My beloved father passed away in 2017, yet his spirit, guidance, and love remain forever in my heart.</p>
             <p>Raised with values of honesty, diligence, and resilience, I strive to be independent and work hard in everything I do. My greatest dream is to make my family happy, to bring pride to my mother, and to become the success my father always believed I would be. 💛</p>
@@ -81,11 +78,23 @@
 <div id="experience" class="page">
     <button class="home-btn" onclick="showPage('menu-page')">🏠 HOME</button>
     <div class="container">
-        <h2 class="section-title">💼 Work Experience</h2>
-        <div class="timeline">
-            <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">July 2025 – July 2026</div><div class="timeline-card"><h3 class="job-title">Administrative Clerk</h3><h4 class="company">Sumesh & Partners</h4><ul class="job-duties"><li><span>✓</span>Managed legal files and documentation</li><li><span>✓</span>Liaised with clients and authorities</li><li><span>✓</span>Processed police and medical document applications</li><li><span>✓</span>Conducted insurance searches</li><li><span>✓</span>Prepared legal documents and correspondence</li><li><span>✓</span>Maintained and updated case records</li></ul></div></div>
-            <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">2024 – 2025</div><div class="timeline-card"><h3 class="job-title">Sales Assistant</h3><h4 class="company">VNX Vape Shop</h4><ul class="job-duties"><li><span>✓</span>Assisted customers with product recommendations</li><li><span>✓</span>Managed inventory and stock</li><li><span>✓</span>Promoted products through social media</li><li><span>✓</span>Delivered excellent customer service</li></ul></div></div>
-            <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">2023</div><div class="timeline-card"><h3 class="job-title">Cashier</h3><h4 class="company">5511 Mart</h4><ul class="job-duties"><li><span>✓</span>Managed cashier transactions</li><li><span>✓</span>Organized inventory</li><li><span>✓</span>Delivered excellent customer service</li></ul></div></div>
+        <div class="content-card">
+            <h2 class="section-title">💼 Work Experience</h2>
+            <div class="job-item">
+                <h3>Administrative Clerk</h3>
+                <h4>Sumesh & Partners | July 2025 – July 2026</h4>
+                <ul><li>✓ Managed legal files and documentation</li><li>✓ Liaised with clients and authorities</li><li>✓ Processed police and medical document applications</li><li>✓ Conducted insurance searches</li><li>✓ Prepared legal documents and correspondence</li><li>✓ Maintained and updated case records</li></ul>
+            </div>
+            <div class="job-item">
+                <h3>Sales Assistant</h3>
+                <h4>VNX Vape Shop | 2024 – 2025</h4>
+                <ul><li>✓ Assisted customers with product recommendations</li><li>✓ Managed inventory and stock</li><li>✓ Promoted products through social media</li><li>✓ Delivered excellent customer service</li></ul>
+            </div>
+            <div class="job-item">
+                <h3>Cashier</h3>
+                <h4>5511 Mart | 2023</h4>
+                <ul><li>✓ Managed cashier transactions</li><li>✓ Organized inventory</li><li>✓ Delivered excellent customer service</li></ul>
+            </div>
         </div>
     </div>
 </div>
@@ -93,37 +102,85 @@
 <!-- PAGE 4: EDUCATION -->
 <div id="education" class="page">
     <button class="home-btn" onclick="showPage('menu-page')">🏠 HOME</button>
-    <div class="container"><h2 class="section-title">🎓 Education</h2><div class="resume-card"><h3 class="card-title">GOON INTERNATIONAL COLLEGE</h3><p class="card-subtitle">Diploma in Information Technology — Semester 5</p><div class="edu-details"><div class="highlight-gpa">GPA 4.0 / 4.0 🎓</div></div></div></div>
+    <div class="container">
+        <div class="content-card center">
+            <h2 class="section-title">🎓 Education</h2>
+            <h3>GOON INTERNATIONAL COLLEGE</h3>
+            <p>Diploma in Information Technology — Semester 5</p>
+            <div class="gpa-badge">GPA 4.0 / 4.0 🎓</div>
+        </div>
+    </div>
 </div>
 
 <!-- PAGE 5: SKILLS -->
 <div id="skills" class="page">
     <button class="home-btn" onclick="showPage('menu-page')">🏠 HOME</button>
-    <div class="container"><h2 class="section-title">💻 Skills & Languages</h2><div class="skills-grid"><div class="skill-category"><h3>📚 Technical Skills</h3><ul class="skill-list"><li>✓ Microsoft Word</li><li>✓ Microsoft Excel</li><li>✓ Microsoft PowerPoint</li><li>✓ Google Sheets</li><li>✓ Microsoft Access (Basic)</li><li>✓ Legal Documentation</li><li>✓ Document Management</li><li>✓ Insurance Search</li><li>✓ Canva Design</li></ul></div><div class="skill-category"><h3>🗣️ Languages</h3><ul class="skill-list"><li>🇲🇾 Malay — Fluent</li><li>🇬🇧 English — Intermediate</li><li>🇨🇳 Chinese — Fluent</li></ul></div></div></div>
+    <div class="container">
+        <div class="content-card">
+            <h2 class="section-title">💻 Skills & Languages</h2>
+            <div class="skills-wrapper">
+                <div><h3>📚 Technical Skills</h3><ul><li>✓ Microsoft Word</li><li>✓ Microsoft Excel</li><li>✓ Microsoft PowerPoint</li><li>✓ Google Sheets</li><li>✓ Microsoft Access (Basic)</li><li>✓ Legal Documentation</li><li>✓ Document Management</li><li>✓ Insurance Search</li><li>✓ Canva Design</li></ul></div>
+                <div><h3>🗣️ Languages</h3><ul><li>🇲🇾 Malay — Fluent</li><li>🇬🇧 English — Intermediate</li><li>🇨🇳 Chinese — Fluent</li></ul></div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <!-- PAGE 6: PORTFOLIO -->
 <div id="portfolio" class="page">
     <button class="home-btn" onclick="showPage('menu-page')">🏠 HOME</button>
-    <div class="container"><h2 class="section-title">🎨 My Portfolio</h2><div class="portfolio-card"><p class="portfolio-intro">Here I will showcase my design works created with Canva — posters, social media graphics, certificates, layouts, and more!</p><div class="portfolio-grid"><div class="portfolio-item"><span class="portfolio-icon">🖼️</span><h3>Poster Design</h3><p>Coming Soon</p></div><div class="portfolio-item"><span class="portfolio-icon">📱</span><h3>Social Media Graphics</h3><p>Coming Soon</p></div><div class="portfolio-item"><span class="portfolio-icon">📜</span><h3>Certificate & Layout Design</h3><p>Coming Soon</p></div><div class="portfolio-item"><span class="portfolio-icon">✨</span><h3>More Designs</h3><p>Coming Soon</p></div></div><p class="portfolio-note">Designs will be added here soon! 🎨💛</p></div></div>
+    <div class="container">
+        <div class="content-card">
+            <h2 class="section-title">🎨 My Portfolio</h2>
+            <p>Here I will showcase my design works created with Canva — posters, social media graphics, certificates, layouts, and more!</p>
+            <div class="portfolio-grid"><div>🖼️<br><b>Poster Design</b><br>Coming Soon</div><div>📱<br><b>Social Media</b><br>Coming Soon</div><div>📜<br><b>Certificates</b><br>Coming Soon</div><div>✨<br><b>More Designs</b><br>Coming Soon</div></div>
+        </div>
+    </div>
 </div>
 
 <!-- PAGE 7: HOBBIES -->
 <div id="hobbies" class="page">
     <button class="home-btn" onclick="showPage('menu-page')">🏠 HOME</button>
-    <div class="container"><h2 class="section-title">💭 Interests & Hobbies</h2><div class="hobbies-card"><p>During my free time, I enjoy listening to music, experimenting with new recipes, and keeping my home organized and tidy. Most of my time is spent with my child — especially teaching them how to read and helping them learn new things every day.</p><p>I also truly value constructive feedback. I appreciate being corrected, because it helps me improve and become a better version of myself. ✨</p></div></div>
+    <div class="container">
+        <div class="content-card">
+            <h2 class="section-title">💭 Interests & Hobbies</h2>
+            <p>During my free time, I enjoy listening to music, experimenting with new recipes, and keeping my home organized and tidy. Most of my time is spent with my child — especially teaching them how to read and helping them learn new things every day.</p>
+            <p>I also truly value constructive feedback. I appreciate being corrected, because it helps me improve and become a better version of myself. ✨</p>
+        </div>
+    </div>
 </div>
 
 <!-- PAGE 8: CERTIFICATES -->
 <div id="certificates" class="page">
     <button class="home-btn" onclick="showPage('menu-page')">🏠 HOME</button>
-    <div class="container"><h2 class="section-title">📜 Certificates</h2><div class="cert-card"><ul class="cert-list-full"><li>📜 Canva for Beginners: Basic Design Skills Workshop (2025)</li><li>📜 Know Yourself Better Through Big 5 Personality (2024)</li><li>📜 Program: Make Yourself A Priority</li><li>📜 Mental Health Kickstart 2026</li><li>📜 Career Pathway: Student Career Interest Assessment</li></ul><p class="reference-note">📎 References Available Upon Request</p></div></div>
+    <div class="container">
+        <div class="content-card">
+            <h2 class="section-title">📜 Certificates</h2>
+            <ul class="cert-list"><li>📜 Canva for Beginners: Basic Design Skills Workshop (2025)</li><li>📜 Know Yourself Better Through Big 5 Personality (2024)</li><li>📜 Program: Make Yourself A Priority</li><li>📜 Mental Health Kickstart 2026</li><li>📜 Career Pathway: Student Career Interest Assessment</li></ul>
+            <p class="ref-note">📎 References Available Upon Request</p>
+        </div>
+    </div>
 </div>
 
 <!-- PAGE 9: CONTACT -->
 <div id="contact" class="page">
     <button class="home-btn" onclick="showPage('menu-page')">🏠 HOME</button>
-    <div class="container"><h2 class="section-title">✉️ Contact Me</h2><div class="contact-info-card"><h3 class="info-heading">Get In Touch</h3><div class="info-row"><div class="info-item"><span class="info-icon">📍</span><div><strong>Location</strong><p>Melaka, Malaysia 🇲🇾</p></div></div><div class="info-item"><span class="info-icon">📱</span><div><strong>Phone</strong><p><a href="tel:+60175145902" class="info-link">017-5145902</a></p></div></div><div class="info-item"><span class="info-icon">✉️</span><div><strong>Email</strong><p><a href="mailto:alicelau03@yahoo.com" class="info-link">alicelau03@yahoo.com</a></p></div></div></div></div><h3 class="social-heading">Connect With Me</h3><div class="social-buttons-grid"><a href="https://github.com/norqistinastudent" target="_blank" rel="noopener" class="social-btn-gh"><svg class="btn-icon-svg" viewBox="0 0 24 24" fill="white"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg><span class="btn-label">GitHub</span><span class="btn-username">norqistinastudent</span></a><a href="https://www.linkedin.com/in/alicelau0310" target="_blank" rel="noopener" class="social-btn-li"><svg class="btn-icon-svg" viewBox="0 0 24 24" fill="white"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg><span class="btn-label">LinkedIn</span><span class="btn-username">alicelau0310</span></a><a href="mailto:alicelau03@yahoo.com" class="social-btn-em"><svg class="btn-icon-svg" viewBox="0 0 24 24" fill="white"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg><span class="btn-label">Email</span><span class="btn-username">alicelau03</span></a></div></div>
+    <div class="container">
+        <div class="content-card">
+            <h2 class="section-title">✉️ Contact Me</h2>
+            <div class="contact-grid">
+                <div>📍<br><b>Location</b><br>Melaka, Malaysia 🇲🇾</div>
+                <div>📱<br><b>Phone</b><br><a href="tel:+60175145902">017-5145902</a></div>
+                <div>✉️<br><b>Email</b><br><a href="mailto:alicelau03@yahoo.com">alicelau03@yahoo.com</a></div>
+            </div>
+            <h3>Connect With Me</h3>
+            <div class="social-row">
+                <a href="https://github.com/norqistinastudent" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/alicelau0310" target="_blank">LinkedIn</a>
+                <a href="mailto:alicelau03@yahoo.com">Email</a>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script>
