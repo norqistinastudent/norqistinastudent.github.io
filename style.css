@@ -1,3 +1,4 @@
+/* ========== ASAS & RESET ========== */
 * {
     margin: 0;
     padding: 0;
@@ -7,202 +8,275 @@
 body {
     background-color: #fff3f4;
     color: #4b224b;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
 }
 
-.container {
+.main-wrapper {
     display: flex;
     min-height: 100vh;
 }
 
-/* ✅ SIDEBAR DENGAN BUTANG GAYA BARU */
+/* ========== SIDEBAR NAVIGATION ========== */
 .sidebar {
     width: 270px;
-    padding: 40px 20px;
     position: fixed;
     height: 100vh;
-    background: transparent;
+    padding: 40px 20px;
+    background-color: transparent;
 }
 
-.logo {
+.brand {
     font-size: 44px;
-    color: #5c2c5c;
     font-weight: 900;
+    color: #5c2c5c;
     margin-bottom: 40px;
 }
 
-.nav {
+.nav-menu {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
-/* BUTANG UTAMA — SAMA MACAM CONTOH */
-.nav-btn {
+/* BUTANG GAYA PILIHAN AWAK (HIJAU, GARIS PEMISAH) */
+.nav-button {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    background-color: #4a9c4a; /* hijau macam contoh */
+    justify-content: space-between;
+    background-color: #4CAF50; /* Hijau macam contoh */
     color: white;
     font-weight: bold;
     font-size: 17px;
     text-decoration: none;
     padding: 14px 18px;
     border-radius: 6px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
     position: relative;
     transition: all 0.25s ease;
 }
 
-/* BARIS PEMISAH TENGAH */
+/* GARIS PEMISAH TENGAH */
 .divider {
     width: 2px;
     height: 22px;
-    background: white;
-    opacity: 0.7;
+    background-color: white;
+    opacity: 0.8;
 }
 
 /* TAPAK KUCING */
-.paw {
+.paw-icon {
     position: absolute;
     right: 12px;
     opacity: 0;
-    transform: translateX(-5px);
-    transition: 0.3s ease;
+    transform: translateX(-8px);
+    transition: all 0.3s ease;
 }
 
 /* KESAN HOVER & AKTIF */
-.nav-btn:hover {
-    background-color: #3d8b3d;
+.nav-button:hover {
+    background-color: #388E3C;
     transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 }
 
-.nav-btn:hover .paw {
+.nav-button:hover .paw-icon {
     opacity: 1;
     transform: translateX(0);
 }
 
-.nav-btn:target,
-.nav-btn.active {
-    background-color: #2b78e4; /* biru bila aktif */
+.nav-button:target {
+    background-color: #2196F3; /* Biru bila dipilih */
 }
 
-/* ✅ KANDUNGAN UTAMA */
-.content {
+/* ========== SISTEM TUKAR HALAMAN (CSS SAHAJA) ========== */
+.content-area {
     margin-left: 270px;
     width: 100%;
     padding: 50px;
 }
 
-.section {
+.content-section {
     display: none;
-    animation: show 0.4s ease;
+    animation: fadeInUp 0.4s ease forwards;
 }
 
-.section:target,
-.section.active {
+.content-section.active,
+.content-section:target {
     display: block;
 }
 
-@keyframes show {
-    from { opacity: 0; transform: translateY(15px); }
-    to { opacity: 1; transform: translateY(0); }
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* PROFIL */
-.profile-card {
+/* ========== PROFIL UTAMA ========== */
+.profile-header {
     text-align: center;
 }
 
-.profile-img img {
-    width: 210px;
-    height: 210px;
+.profile-picture img {
+    width: 220px;
+    height: 220px;
     border-radius: 50%;
     border: 6px solid #ff9e80;
+    object-fit: cover;
     margin-bottom: 25px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
 h1 {
     font-size: 48px;
-    margin-bottom: 12px;
     color: #4b224b;
+    margin-bottom: 12px;
 }
 
-.tag { font-size: 23px; margin-bottom: 10px; }
-.goal { font-size: 21px; color: #c2185b; margin: 15px 0; }
+.job-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
 
+.career-goal {
+    font-size: 22px;
+    color: #C2185B;
+    margin: 15px 0;
+}
+
+.contact-details p {
+    font-size: 22px;
+    margin: 8px 0;
+}
+
+/* ========== KANDUNGAN KAD & SUSUNAN ========== */
 h2 {
-    font-size: 30px;
-    margin-bottom: 22px;
-    border-bottom: 2px solid #f8d6dc;
+    font-size: 32px;
+    margin-bottom: 25px;
     padding-bottom: 8px;
+    border-bottom: 2px solid #f8d6dc;
 }
 
-.box {
-    background: rgba(255,255,255,0.85);
-    padding: 24px;
-    border-radius: 12px;
-    margin-bottom: 18px;
-    box-shadow: 0 3px 10px rgba(180,120,150,0.12);
+.info-card {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 25px;
+    border-radius: 14px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(180, 120, 150, 0.12);
+    transition: transform 0.3s ease;
 }
 
-.grid {
+.info-card:hover {
+    transform: translateY(-4px);
+}
+
+.info-card ul {
+    list-style-position: inside;
+    margin-top: 10px;
+}
+
+.info-card li {
+    margin: 6px 0;
+}
+
+.two-column-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 18px;
+    gap: 20px;
 }
 
-.grid4 {
+.four-column-grid {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 12px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
     margin-top: 15px;
 }
 
-.item {
+.portfolio-item {
     background: #f8e8ef;
-    padding: 14px;
-    border-radius: 8px;
+    padding: 15px;
+    border-radius: 10px;
     text-align: center;
 }
 
-.gpa {
+.gpa-score {
     font-weight: bold;
-    color: #2e7d32;
-    font-size: 19px;
-    margin-top: 8px;
+    color: #2E7D32;
+    font-size: 20px;
+    margin-top: 10px;
 }
 
-.social {
+.reference-note {
+    margin-top: 15px;
+    font-style: italic;
+    color: #666;
+}
+
+.divider-line {
+    border: none;
+    height: 2px;
+    background: #f0e0e6;
+    margin: 20px 0;
+}
+
+.contact-link {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+.social-buttons {
     display: flex;
-    gap: 14px;
-    margin-top: 18px;
+    gap: 15px;
     flex-wrap: wrap;
 }
 
-.social-btn {
-    background: #4a9c4a;
+.social-link {
+    background: #4CAF50;
     color: white;
-    padding: 12px 18px;
+    padding: 12px 20px;
     border-radius: 6px;
     text-decoration: none;
     font-weight: bold;
     transition: background 0.25s ease;
 }
 
-.social-btn:hover {
-    background: #3d8b3d;
+.social-link:hover {
+    background: #388E3C;
 }
 
-/* ✅ RESPONSIVE */
-@media (max-width:768px) {
+/* ========== RESPONSIVE (TELEFON) ========== */
+@media (max-width: 800px) {
     .sidebar {
         width: 100%;
         position: relative;
         height: auto;
     }
-    .container { flex-direction: column; }
-    .content { margin-left: 0; padding: 25px; }
-    .grid, .grid4 { grid-template-columns: 1fr; }
-    h1 { font-size: 34px; }
+
+    .main-wrapper {
+        flex-direction: column;
+    }
+
+    .content-area {
+        margin-left: 0;
+        padding: 25px;
+    }
+
+    .two-column-grid,
+    .four-column-grid {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
 }
